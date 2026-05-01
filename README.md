@@ -10,10 +10,11 @@ A high-polish, local-first Android application designed to help you define, trac
 -   **Goal Management:** Create, **edit**, and track goals with detailed descriptions, custom categories, and **Priority** status (marked with a ⭐).
 -   **Milestones (Sub-tasks):** Break down large goals into smaller, actionable milestones with automated progress tracking and **manual reordering** (Up/Down controls).
 -   **Advanced Sorting:** Organize your dashboard by **Deadline**, **Progress**, **Creation Date**, **Name**, or **Priority**.
--   **Custom Theme Control:** Robust, independent Light/Dark mode toggle that respects user preference over system settings.
+-   **Custom Theme Control:** Persistent Light/Dark mode settings using **Jetpack DataStore** that remember your preference across app restarts.
 -   **Goal Archives:** Keep your dashboard focused by archiving completed goals. A dedicated view lets you manage and unarchive your history.
 -   **Search & Filtering:** Dynamic, iOS-style search bar and interactive category tags for instant goal discovery.
 -   **Smart Reminders:** Schedule local notifications using `WorkManager` to stay on top of your deadlines.
+-   **Localization Ready:** All UI strings are externalized to `res/values/strings.xml`, ready for translation.
 -   **Visual Deadlines:** Integrated Material 3 DatePicker with **overdue highlighting** (Red alert for past-due tasks).
 -   **Data Export:** Share a comprehensive, beautifully formatted text summary of your goals, milestones, and stats with other apps.
 
@@ -23,9 +24,10 @@ A high-polish, local-first Android application designed to help you define, trac
 -   **UI Framework:** Jetpack Compose (Declarative UI)
 -   **Architecture:** MVVM (Model-View-ViewModel)
 -   **Dependency Injection:** Hilt 2.50
--   **Local Persistence:** Room Database 2.6.1 (SQL abstraction)
+-   **Local Persistence:** Room Database 2.6.1 & **Jetpack DataStore**
 -   **Background Tasks:** WorkManager (for robust reminders)
 -   **Asynchronous Flows:** Kotlin Coroutines & StateFlow
+-   **Testing:** JUnit 4, MockK, Turbine, and Hilt Testing
 -   **Build System:** Gradle 9.5.0 with KSP (Kotlin Symbol Processing)
 
 ## 📂 Project Structure
@@ -35,13 +37,16 @@ SelfGoals/
 ├── app/
 │   ├── src/main/
 │   │   ├── java/com/example/selfgoals/
-│   │   │   ├── data/           # Entities (Goal, Category, Milestone), DAOs, and Repositories
+│   │   │   ├── data/           # Entities, DAOs, and Repositories (Settings & Goals)
 │   │   │   ├── di/             # Hilt Dependency Injection modules
 │   │   │   ├── ui/             # Compose Screens (Dashboard), ViewModels, and Themes
-│   │   │   ├── worker/         # WorkManager background workers for notifications
+│   │   │   ├── worker/         # WorkManager background workers
 │   │   │   └── utils/          # Helpers (Notifications, formatting)
+│   │   ├── res/values/         # externalized strings.xml and colors
 │   │   └── AndroidManifest.xml # App manifest and configuration
-└── build.gradle.kts            # Root project dependencies and configuration
+│   ├── src/test/               # DashboardViewModel Unit Tests
+│   └── src/androidTest/        # Compose UI Instrumented Tests
+└── build.gradle.kts            # Root project dependencies
 ```
 
 ## 🚀 Getting Started
@@ -49,13 +54,13 @@ SelfGoals/
 1.  Clone the repository.
 2.  Open the project in **Android Studio Hedgehog** or newer.
 3.  Sync Gradle and run on an emulator or physical device (API 24+).
-4.  **Haptics Note:** For the best experience, run on a physical device with a haptic engine enabled.
+4.  **Run Tests:** Execute `./gradlew test` for unit tests or `./gradlew connectedAndroidTest` for UI tests.
 
 ---
 *SelfGoals is built with care using modern Android standards and a focus on UX.*
 
-## ✅ Project Status: v1.0 Stable
-- **Build Verified:** Successfully built using Gradle 9.5 and Kotlin 1.9.22.
-- **Environment Tested:** Verified on Android Virtual Device (AVD) running API 34 (Pixel 6).
-- **Dark Mode Fixed:** Robust, unified theme logic ensuring perfect visibility across all modes.
-- **Architecture:** 100% Jetpack Compose with modular MVVM pattern.
+## ✅ Project Status: v1.1 Refined
+- **Persistence:** Integrated Jetpack DataStore for user preferences.
+- **Robust Testing:** Full suite of Unit and UI tests implemented and verified.
+- **Localization Ready:** 100% of UI strings moved to resource files.
+- **Architecture:** Refactored for maximum testability with constructor injection.
