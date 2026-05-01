@@ -32,6 +32,8 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.compose.ui.res.stringResource
+import com.example.selfgoals.R
 import com.example.selfgoals.data.entity.Category
 import com.example.selfgoals.data.entity.Goal
 import com.example.selfgoals.data.entity.GoalDetails
@@ -85,9 +87,9 @@ fun DashboardScreen(
                     .padding(horizontal = 24.dp, vertical = 12.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Icon(Icons.Default.Add, contentDescription = "Add", tint = Color.White)
+                Icon(Icons.Default.Add, contentDescription = stringResource(R.string.add), tint = Color.White)
                 Spacer(modifier = Modifier.width(8.dp))
-                Text("New Goal", color = Color.White, fontWeight = FontWeight.Bold)
+                Text(stringResource(R.string.new_goal), color = Color.White, fontWeight = FontWeight.Bold)
             }
         }
     ) { padding ->
@@ -105,7 +107,7 @@ fun DashboardScreen(
                 verticalAlignment = Alignment.Bottom
             ) {
                 Text(
-                    text = "SelfGoals",
+                    text = stringResource(R.string.app_name),
                     style = MaterialTheme.typography.headlineLarge.copy(
                         fontWeight = FontWeight.ExtraBold,
                         fontSize = 34.sp,
@@ -119,21 +121,21 @@ fun DashboardScreen(
                     }) {
                         Icon(
                             if (showArchived) Icons.Default.Unarchive else Icons.Default.Archive,
-                            contentDescription = "Archive",
+                            contentDescription = stringResource(if (showArchived) R.string.unarchive else R.string.archive),
                             tint = if (showArchived) MaterialTheme.colorScheme.primary else Color.Gray
                         )
                     }
                     
                     Box {
                         IconButton(onClick = { showSettingsMenu = true }) {
-                            Icon(Icons.Default.MoreHoriz, contentDescription = "More")
+                            Icon(Icons.Default.MoreHoriz, contentDescription = stringResource(R.string.more))
                         }
                         DropdownMenu(
                             expanded = showSettingsMenu,
                             onDismissRequest = { showSettingsMenu = false },
                             modifier = Modifier.background(MaterialTheme.colorScheme.surface)
                         ) {
-                            Text("Theme", modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp), style = MaterialTheme.typography.labelSmall, color = Color.Gray)
+                            Text(stringResource(R.string.theme), modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp), style = MaterialTheme.typography.labelSmall, color = Color.Gray)
                             ThemeMode.entries.forEach { mode ->
                                 DropdownMenuItem(
                                     text = { Text(mode.name.lowercase().replaceFirstChar { it.uppercase() }) },
@@ -146,9 +148,9 @@ fun DashboardScreen(
                                 )
                             }
                             Divider()
-                            Text("Export", modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp), style = MaterialTheme.typography.labelSmall, color = Color.Gray)
+                            Text(stringResource(R.string.export), modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp), style = MaterialTheme.typography.labelSmall, color = Color.Gray)
                             DropdownMenuItem(
-                                text = { Text("Share Summary") },
+                                text = { Text(stringResource(R.string.share_summary)) },
                                 onClick = {
                                     haptic.performHapticFeedback(HapticFeedbackType.LongPress)
                                     val shareText = viewModel.generateExportText()
@@ -163,7 +165,7 @@ fun DashboardScreen(
                                 leadingIcon = { Icon(Icons.Default.Share, null) }
                             )
                             DropdownMenuItem(
-                                text = { Text("Manage Tags") },
+                                text = { Text(stringResource(R.string.manage_tags)) },
                                 onClick = { 
                                     showAddCategoryDialog = true
                                     showSettingsMenu = false
@@ -195,7 +197,7 @@ fun DashboardScreen(
                         TextField(
                             value = searchQuery,
                             onValueChange = { viewModel.updateSearchQuery(it) },
-                            placeholder = { Text("Search...", color = Color.Gray) },
+                            placeholder = { Text(stringResource(R.string.search_hint), color = Color.Gray) },
                             modifier = Modifier.weight(1f),
                             colors = TextFieldDefaults.colors(
                                 focusedContainerColor = Color.Transparent,
@@ -212,7 +214,7 @@ fun DashboardScreen(
                                 haptic.performHapticFeedback(HapticFeedbackType.LongPress)
                                 viewModel.updateSearchQuery("") 
                             }) {
-                                Icon(Icons.Default.Close, contentDescription = "Clear", tint = Color.Gray, modifier = Modifier.size(20.dp))
+                                Icon(Icons.Default.Close, contentDescription = stringResource(R.string.clear), tint = Color.Gray, modifier = Modifier.size(20.dp))
                             }
                         }
                     }
@@ -260,7 +262,7 @@ fun DashboardScreen(
             
             if (goals.isEmpty()) {
                 Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                    Text("Ready for a new achievement?", style = MaterialTheme.typography.bodyLarge, color = Color.Gray)
+                    Text(stringResource(R.string.empty_goals_hint), style = MaterialTheme.typography.bodyLarge, color = Color.Gray)
                 }
             } else {
                 LazyColumn(
@@ -458,7 +460,7 @@ fun GoalItem(
                     if (goal.deadline != null) {
                         val isOverdue = goal.deadline < System.currentTimeMillis() && !goal.isCompleted
                         Text(
-                            text = "Due ${SimpleDateFormat("MMM dd, yyyy", Locale.getDefault()).format(Date(goal.deadline))}",
+                            text = stringResource(R.string.due_date, SimpleDateFormat("MMM dd, yyyy", Locale.getDefault()).format(Date(goal.deadline))),
                             style = MaterialTheme.typography.labelSmall,
                             color = if (isOverdue) Color(0xFFFF3B30) else Color.Gray
                         )
@@ -466,13 +468,13 @@ fun GoalItem(
                 }
 
                 IconButton(onClick = onEditGoal) {
-                    Icon(Icons.Default.Edit, contentDescription = "Edit", tint = Color.Gray, modifier = Modifier.size(20.dp))
+                    Icon(Icons.Default.Edit, contentDescription = stringResource(R.string.edit), tint = Color.Gray, modifier = Modifier.size(20.dp))
                 }
                 
                 IconButton(onClick = { expanded = !expanded }) {
                     Icon(
                         if (expanded) Icons.Default.KeyboardArrowUp else Icons.Default.KeyboardArrowDown,
-                        contentDescription = "Expand",
+                        contentDescription = stringResource(R.string.expand),
                         tint = Color.Gray
                     )
                 }
@@ -547,7 +549,7 @@ fun GoalItem(
                         TextField(
                             value = newMilestoneTitle,
                             onValueChange = { newMilestoneTitle = it },
-                            placeholder = { Text("Add milestone...", fontSize = 14.sp) },
+                            placeholder = { Text(stringResource(R.string.add_milestone_hint), fontSize = 14.sp) },
                             modifier = Modifier.weight(1f),
                             colors = TextFieldDefaults.colors(
                                 focusedContainerColor = Color.Transparent,
@@ -567,7 +569,7 @@ fun GoalItem(
                             },
                             enabled = newMilestoneTitle.isNotBlank()
                         ) {
-                            Icon(Icons.Default.AddCircle, contentDescription = "Add", tint = MaterialTheme.colorScheme.primary)
+                            Icon(Icons.Default.AddCircle, contentDescription = stringResource(R.string.add), tint = MaterialTheme.colorScheme.primary)
                         }
                     }
                     
@@ -579,21 +581,21 @@ fun GoalItem(
                             onClick = onPriorityToggle,
                             colors = ButtonDefaults.textButtonColors(contentColor = if (goal.isPriority) Color(0xFFFFCC00) else Color.Gray)
                         ) {
-                            Text(if (goal.isPriority) "Remove Priority" else "Set Priority", style = MaterialTheme.typography.labelSmall)
+                            Text(stringResource(if (goal.isPriority) R.string.remove_priority else R.string.set_priority), style = MaterialTheme.typography.labelSmall)
                         }
                         
                         TextButton(
                             onClick = onArchiveGoal,
                             colors = ButtonDefaults.textButtonColors(contentColor = MaterialTheme.colorScheme.primary),
                         ) {
-                            Text(if (goal.isArchived) "Unarchive" else "Archive", style = MaterialTheme.typography.labelSmall)
+                            Text(stringResource(if (goal.isArchived) R.string.unarchive else R.string.archive), style = MaterialTheme.typography.labelSmall)
                         }
                         
                         TextButton(
                             onClick = onDeleteGoal,
                             colors = ButtonDefaults.textButtonColors(contentColor = Color(0xFFFF3B30)),
                         ) {
-                            Text("Delete Goal", style = MaterialTheme.typography.labelSmall)
+                            Text(stringResource(R.string.delete_goal), style = MaterialTheme.typography.labelSmall)
                         }
                     }
                 }
@@ -621,11 +623,11 @@ fun AnalyticsOverview(stats: ProgressStats, isDark: Boolean) {
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(
-                    text = "Activity",
+                    text = stringResource(R.string.activity),
                     style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Bold)
                 )
                 Text(
-                    text = "${(stats.goalCompletionRate * 100).toInt()}% Done",
+                    text = stringResource(R.string.done_percent, (stats.goalCompletionRate * 100).toInt()),
                     style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold),
                     color = MaterialTheme.colorScheme.primary
                 )
@@ -635,7 +637,7 @@ fun AnalyticsOverview(stats: ProgressStats, isDark: Boolean) {
             
             Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(16.dp)) {
                 AnalyticsModule(
-                    label = "Goals",
+                    label = stringResource(R.string.goals),
                     current = stats.completedGoals,
                     total = stats.totalGoals,
                     color = Color(0xFF007AFF),
@@ -643,7 +645,7 @@ fun AnalyticsOverview(stats: ProgressStats, isDark: Boolean) {
                     modifier = Modifier.weight(1f)
                 )
                 AnalyticsModule(
-                    label = "Tasks",
+                    label = stringResource(R.string.tasks),
                     current = stats.completedMilestones,
                     total = stats.totalMilestones,
                     color = Color(0xFF34C759),
@@ -713,7 +715,7 @@ fun GoalDialog(
             ) {
                 Column(modifier = Modifier.padding(24.dp)) {
                     Text(
-                        text = if (goalToEdit == null) "New Goal" else "Edit Goal", 
+                        text = stringResource(if (goalToEdit == null) R.string.new_goal else R.string.edit_goal), 
                         style = MaterialTheme.typography.headlineSmall.copy(fontWeight = FontWeight.ExtraBold)
                     )
                     Spacer(modifier = Modifier.height(20.dp))
@@ -721,7 +723,7 @@ fun GoalDialog(
                     OutlinedTextField(
                         value = title,
                         onValueChange = { title = it },
-                        placeholder = { Text("What's the goal?") },
+                        placeholder = { Text(stringResource(R.string.goal_title_hint)) },
                         modifier = Modifier.fillMaxWidth(),
                         shape = RoundedCornerShape(16.dp)
                     )
@@ -729,14 +731,14 @@ fun GoalDialog(
                     OutlinedTextField(
                         value = desc,
                         onValueChange = { desc = it },
-                        placeholder = { Text("Add details...") },
+                        placeholder = { Text(stringResource(R.string.goal_desc_hint)) },
                         modifier = Modifier.fillMaxWidth(),
                         shape = RoundedCornerShape(16.dp)
                     )
                     
                     Spacer(modifier = Modifier.height(20.dp))
                     
-                    Text("Options", style = MaterialTheme.typography.labelLarge.copy(fontWeight = FontWeight.Bold))
+                    Text(stringResource(R.string.options), style = MaterialTheme.typography.labelLarge.copy(fontWeight = FontWeight.Bold))
                     Spacer(modifier = Modifier.height(8.dp))
                     
                     Surface(
@@ -755,7 +757,7 @@ fun GoalDialog(
                                 Icon(Icons.Default.CalendarToday, contentDescription = null, modifier = Modifier.size(20.dp))
                                 Spacer(modifier = Modifier.width(12.dp))
                                 Text(
-                                    text = if (selectedDate != null) dateFormatter.format(Date(selectedDate)) else "Select Deadline",
+                                    text = if (selectedDate != null) dateFormatter.format(Date(selectedDate)) else stringResource(R.string.select_deadline),
                                     modifier = Modifier.weight(1f)
                                 )
                                 Icon(Icons.Default.ChevronRight, contentDescription = null, tint = Color.Gray, modifier = Modifier.size(20.dp))
@@ -769,7 +771,7 @@ fun GoalDialog(
                             ) {
                                 Icon(Icons.Default.Notifications, contentDescription = null, modifier = Modifier.size(20.dp))
                                 Spacer(modifier = Modifier.width(12.dp))
-                                Text("Reminder", modifier = Modifier.weight(1f))
+                                Text(stringResource(R.string.reminder), modifier = Modifier.weight(1f))
                                 Switch(checked = setReminder, onCheckedChange = { setReminder = it })
                             }
                             Divider(modifier = Modifier.padding(horizontal = 12.dp), color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.1f))
@@ -782,7 +784,7 @@ fun GoalDialog(
                             ) {
                                 Icon(Icons.Default.Star, contentDescription = null, modifier = Modifier.size(20.dp), tint = if (isPriority) Color(0xFFFFCC00) else Color.Gray)
                                 Spacer(modifier = Modifier.width(12.dp))
-                                Text("High Priority", modifier = Modifier.weight(1f))
+                                Text(stringResource(R.string.high_priority), modifier = Modifier.weight(1f))
                                 Checkbox(checked = isPriority, onCheckedChange = { isPriority = it })
                             }
                         }
@@ -793,7 +795,7 @@ fun GoalDialog(
                         OutlinedTextField(
                             value = reminderMinutes,
                             onValueChange = { if (it.all { char -> char.isDigit() }) reminderMinutes = it },
-                            label = { Text("Minutes from now") },
+                            label = { Text(stringResource(R.string.minutes_from_now)) },
                             modifier = Modifier.fillMaxWidth(),
                             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
                             shape = RoundedCornerShape(16.dp)
@@ -801,14 +803,14 @@ fun GoalDialog(
                     }
 
                     Spacer(modifier = Modifier.height(20.dp))
-                    Text("Category", style = MaterialTheme.typography.labelLarge.copy(fontWeight = FontWeight.Bold))
+                    Text(stringResource(R.string.category), style = MaterialTheme.typography.labelLarge.copy(fontWeight = FontWeight.Bold))
                     Spacer(modifier = Modifier.height(8.dp))
                     LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                         item {
                             FilterChip(
                                 selected = selectedCategoryId == null,
                                 onClick = { selectedCategoryId = null },
-                                label = { Text("None") },
+                                label = { Text(stringResource(R.string.none)) },
                                 shape = RoundedCornerShape(12.dp)
                             )
                         }
@@ -842,7 +844,7 @@ fun GoalDialog(
                         shape = RoundedCornerShape(16.dp)
                     ) {
                         Text(
-                            text = if (goalToEdit == null) "Create Goal" else "Save Changes", 
+                            text = stringResource(if (goalToEdit == null) R.string.create_goal else R.string.save_changes), 
                             fontWeight = FontWeight.Bold, 
                             fontSize = 16.sp
                         )
@@ -852,7 +854,7 @@ fun GoalDialog(
                         onClick = onDismiss,
                         modifier = Modifier.fillMaxWidth()
                     ) {
-                        Text("Cancel", color = Color.Gray)
+                        Text(stringResource(R.string.cancel), color = Color.Gray)
                     }
                 }
             }
@@ -863,10 +865,10 @@ fun GoalDialog(
         DatePickerDialog(
             onDismissRequest = { showDatePicker = false },
             confirmButton = {
-                TextButton(onClick = { showDatePicker = false }) { Text("Done") }
+                TextButton(onClick = { showDatePicker = false }) { Text(stringResource(R.string.done)) }
             },
             dismissButton = {
-                TextButton(onClick = { showDatePicker = false }) { Text("Cancel") }
+                TextButton(onClick = { showDatePicker = false }) { Text(stringResource(R.string.cancel)) }
             }
         ) {
             DatePicker(state = datePickerState)
@@ -887,16 +889,16 @@ fun AddCategoryDialog(
         onDismissRequest = onDismiss,
         confirmButton = {
             Button(onClick = { if (name.isNotBlank()) onConfirm(name, selectedColor) }) {
-                Text("Add")
+                Text(stringResource(R.string.add))
             }
         },
-        title = { Text("New Tag") },
+        title = { Text(stringResource(R.string.new_tag)) },
         text = {
             Column {
                 OutlinedTextField(
                     value = name,
                     onValueChange = { name = it },
-                    placeholder = { Text("Work, Health, Fun...") },
+                    placeholder = { Text(stringResource(R.string.category_name_hint)) },
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(12.dp)
                 )

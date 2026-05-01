@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">SelfGoals</string>
+    <string name="new_goal">New Goal</string>
+    <string name="add">Add</string>
+    <string name="archive">Archive</string>
+    <string name="unarchive">Unarchive</string>
+    <string name="theme">Theme</string>
+    <string name="export">Export</string>
+    <string name="share_summary">Share Summary</string>
+    <string name="manage_tags">Manage Tags</string>
+    <string name="search_hint">Search...</string>
+    <string name="clear">Clear</string>
+    <string name="more">More</string>
+    <string name="empty_goals_hint">Ready for a new achievement?</string>
+    <string name="due_date">Due %s</string>
+    <string name="edit">Edit</string>
+    <string name="expand">Expand</string>
+    <string name="add_milestone_hint">Add milestone...</string>
+    <string name="remove_priority">Remove Priority</string>
+    <string name="set_priority">Set Priority</string>
+    <string name="delete_goal">Delete Goal</string>
+    <string name="activity">Activity</string>
+    <string name="done_percent">%1$d%% Done</string>
+    <string name="goals">Goals</string>
+    <string name="tasks">Tasks</string>
+    
+    <!-- Goal Dialog -->
+    <string name="edit_goal">Edit Goal</string>
+    <string name="goal_title_hint">What\'s the goal?</string>
+    <string name="goal_desc_hint">Add details...</string>
+    <string name="options">Options</string>
+    <string name="select_deadline">Select Deadline</string>
+    <string name="reminder">Reminder</string>
+    <string name="high_priority">High Priority</string>
+    <string name="minutes_from_now">Minutes from now</string>
+    <string name="category">Category</string>
+    <string name="none">None</string>
+    <string name="create_goal">Create Goal</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="cancel">Cancel</string>
+    <string name="done">Done</string>
+    
+    <!-- Category Dialog -->
+    <string name="new_tag">New Tag</string>
+    <string name="category_name_hint">Work, Health, Fun...</string>
+
+    <!-- Export -->
+    <string name="export_no_goals">No goals tracked yet in SelfGoals.</string>
+    <string name="export_header">SelfGoals Summary\nGenerated: %1$s\n---\n</string>
+    <string name="export_goal_item">%1$d. %2$s %3$s%4$s\n</string>
+    <string name="status_archived">[ARCHIVED]</string>
+    <string name="status_done">[DONE]</string>
+    <string name="status_active">[ACTIVE]</string>
+</resources>

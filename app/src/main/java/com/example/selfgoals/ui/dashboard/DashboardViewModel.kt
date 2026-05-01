@@ -1,6 +1,7 @@
 package com.example.selfgoals.ui.dashboard
 
 import android.app.Application
+import com.example.selfgoals.R
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.work.Data
@@ -8,6 +9,7 @@ import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
 import com.example.selfgoals.data.entity.*
 import com.example.selfgoals.data.repository.GoalRepository
+import com.example.selfgoals.data.repository.SettingsRepository
 import com.example.selfgoals.worker.GoalReminderWorker
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.*
@@ -28,25 +30,25 @@ enum class ThemeMode {
 @HiltViewModel
 class DashboardViewModel @Inject constructor(
     application: Application,
-    private val repository: GoalRepository
+    private val repository: GoalRepository,
+    private val settingsRepository: SettingsRepository,
+    private val workManager: WorkManager
 ) : AndroidViewModel(application) {
-
-    private val workManager = WorkManager.getInstance(application)
 
     private val _searchQuery = MutableStateFlow("")
     val searchQuery: StateFlow<String> = _searchQuery.asStateFlow()
 
-    private val _showArchived = MutableStateFlow(false)
-    val showArchived: StateFlow<Boolean> = _showArchived.asStateFlow()
+    val showArchived: StateFlow<Boolean> = settingsRepository.showArchived
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), false)
 
     private val _selectedCategoryId = MutableStateFlow<Long?>(null)
     val selectedCategoryId: StateFlow<Long?> = _selectedCategoryId.asStateFlow()
 
-    private val _sortOption = MutableStateFlow(SortOption.DATE_CREATED)
-    val sortOption: StateFlow<SortOption> = _sortOption.asStateFlow()
+    val sortOption: StateFlow<SortOption> = settingsRepository.sortOption
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), SortOption.DATE_CREATED)
 
-    private val _themeMode = MutableStateFlow(ThemeMode.SYSTEM)
-    val themeMode: StateFlow<ThemeMode> = _themeMode.asStateFlow()
+    val themeMode: StateFlow<ThemeMode> = settingsRepository.themeMode
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), ThemeMode.SYSTEM)
 
     private val _allGoals = repository.getAllGoalsWithDetails()
         .stateIn(
@@ -58,9 +60,9 @@ class DashboardViewModel @Inject constructor(
     val goals: StateFlow<List<GoalDetails>> = combine(
         _allGoals, 
         _searchQuery, 
-        _showArchived, 
+        showArchived, 
         _selectedCategoryId,
-        _sortOption
+        sortOption
     ) { goalsList, query, archived, selectedId, sort ->
         val filtered = goalsList.filter { 
             it.goal.isArchived == archived &&
@@ -124,10 +126,16 @@ class DashboardViewModel @Inject constructor(
     )
 
     fun updateSearchQuery(query: String) { _searchQuery.value = query }
-    fun toggleShowArchived() { _showArchived.value = !_showArchived.value }
+    fun toggleShowArchived() { 
+        viewModelScope.launch { settingsRepository.setShowArchived(!showArchived.value) }
+    }
     fun selectCategory(categoryId: Long?) { _selectedCategoryId.value = if (_selectedCategoryId.value == categoryId) null else categoryId }
-    fun setSortOption(option: SortOption) { _sortOption.value = option }
-    fun setThemeMode(mode: ThemeMode) { _themeMode.value = mode }
+    fun setSortOption(option: SortOption) { 
+        viewModelScope.launch { settingsRepository.setSortOption(option) }
+    }
+    fun setThemeMode(mode: ThemeMode) { 
+        viewModelScope.launch { settingsRepository.setThemeMode(mode) }
+    }
 
     fun addGoal(title: String, description: String, categoryId: Long? = null, reminderTime: Long? = null, deadline: Long? = null, isPriority: Boolean = false) {
         viewModelScope.launch {
@@ -211,14 +219,22 @@ class DashboardViewModel @Inject constructor(
 
     fun generateExportText(): String {
         val goalsList = _allGoals.value
-        if (goalsList.isEmpty()) return "No goals tracked yet in SelfGoals."
+        if (goalsList.isEmpty()) return getApplication<Application>().getString(R.string.export_no_goals)
         val sb = StringBuilder()
-        sb.append("SelfGoals Summary\nGenerated: ${SimpleDateFormat("MMM dd, yyyy", Locale.getDefault()).format(Date())}\n---\n")
+        val header = getApplication<Application>().getString(
+            R.string.export_header,
+            SimpleDateFormat("MMM dd, yyyy", Locale.getDefault()).format(Date())
+        )
+        sb.append(header)
         goalsList.forEachIndexed { index, details ->
             val g = details.goal
-            val status = if (g.isArchived) "[ARCHIVED]" else if (g.isCompleted) "[DONE]" else "[ACTIVE]"
+            val status = getApplication<Application>().getString(
+                if (g.isArchived) R.string.status_archived 
+                else if (g.isCompleted) R.string.status_done 
+                else R.string.status_active
+            )
             val priority = if (g.isPriority) " ⭐" else ""
-            sb.append("${index + 1}. $status ${g.title}$priority\n")
+            sb.append(getApplication<Application>().getString(R.string.export_goal_item, index + 1, status, g.title, priority))
             if (g.description.isNotEmpty()) sb.append("   ${g.description}\n")
             details.milestones.forEach { m -> sb.append("   ${if (m.isCompleted) "✓" else "○"} ${m.title}\n") }
             sb.append("\n")

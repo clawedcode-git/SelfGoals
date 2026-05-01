@@ -16,7 +16,7 @@ android {
         versionCode = 1
         versionName = "1.0"
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = "com.example.selfgoals.HiltTestRunner"
         vectorDrawables {
             useSupportLibrary = true
         }
@@ -78,12 +78,22 @@ dependencies {
     implementation("com.google.dagger:hilt-android:$hilt_version")
     ksp("com.google.dagger:hilt-android-compiler:$hilt_version")
     implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
+    
+    // Hilt Testing
+    androidTestImplementation("com.google.dagger:hilt-android-testing:$hilt_version")
+    kspAndroidTest("com.google.dagger:hilt-android-compiler:$hilt_version")
 
     // WorkManager
     implementation("androidx.work:work-runtime-ktx:2.9.0")
 
+    // DataStore
+    implementation("androidx.datastore:datastore-preferences:1.0.0")
+
     // Testing
     testImplementation("junit:junit:4.13.2")
+    testImplementation("io.mockk:mockk:1.13.8")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3")
+    testImplementation("app.cash.turbine:turbine:1.0.0")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     androidTestImplementation(platform("androidx.compose:compose-bom:2023.08.00"))

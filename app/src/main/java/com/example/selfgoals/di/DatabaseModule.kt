@@ -2,6 +2,7 @@ package com.example.selfgoals.di
 
 import android.content.Context
 import androidx.room.Room
+import androidx.work.WorkManager
 import com.example.selfgoals.data.SelfGoalsDatabase
 import com.example.selfgoals.data.dao.CategoryDao
 import com.example.selfgoals.data.dao.GoalDao
@@ -35,4 +36,10 @@ object DatabaseModule {
 
     @Provides
     fun provideMilestoneDao(db: SelfGoalsDatabase): MilestoneDao = db.milestoneDao()
+
+    @Provides
+    @Singleton
+    fun provideWorkManager(@ApplicationContext context: Context): WorkManager {
+        return WorkManager.getInstance(context)
+    }
 }
