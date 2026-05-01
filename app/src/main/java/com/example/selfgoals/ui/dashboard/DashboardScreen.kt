@@ -58,8 +58,14 @@ fun DashboardScreen(
     var showAddCategoryDialog by remember { mutableStateOf(false) }
     var showSettingsMenu by remember { mutableStateOf(false) }
 
-    val isDark = isSystemInDarkTheme()
-    val bgColor = if (isDark) Color.Black else Color(0xFFF2F2F7)
+    val systemDark = isSystemInDarkTheme()
+    val isDark = when (themeMode) {
+        ThemeMode.SYSTEM -> systemDark
+        ThemeMode.LIGHT -> false
+        ThemeMode.DARK -> true
+    }
+    
+    val bgColor = MaterialTheme.colorScheme.background
     val context = LocalContext.current
     val haptic = LocalHapticFeedback.current
 
@@ -178,7 +184,7 @@ fun DashboardScreen(
             ) {
                 Surface(
                     modifier = Modifier.weight(1f),
-                    color = if (isDark) Color(0xFF1C1C1E) else Color(0xFFE5E5EA),
+                    color = MaterialTheme.colorScheme.secondary.copy(alpha = if (isDark) 0.15f else 0.05f),
                     shape = RoundedCornerShape(12.dp)
                 ) {
                     Row(
@@ -217,7 +223,7 @@ fun DashboardScreen(
                 var showSortMenu by remember { mutableStateOf(false) }
                 Box {
                     Surface(
-                        color = if (isDark) Color(0xFF1C1C1E) else Color(0xFFE5E5EA),
+                        color = MaterialTheme.colorScheme.secondary.copy(alpha = if (isDark) 0.15f else 0.05f),
                         shape = RoundedCornerShape(12.dp),
                         modifier = Modifier.clickable { showSortMenu = true }
                     ) {
@@ -238,12 +244,13 @@ fun DashboardScreen(
                 }
             }
 
-            AnalyticsOverview(stats = stats)
+            AnalyticsOverview(stats = stats, isDark = isDark)
             
             if (categories.isNotEmpty()) {
                 CategoryList(
                     categories = categories,
                     selectedCategoryId = selectedCategoryId,
+                    isDark = isDark,
                     onCategoryClick = { 
                         haptic.performHapticFeedback(HapticFeedbackType.LongPress)
                         viewModel.selectCategory(it) 
@@ -263,6 +270,7 @@ fun DashboardScreen(
                     items(goals, key = { it.goal.id }) { goalDetails ->
                         GoalItem(
                             goalDetails = goalDetails,
+                            isDark = isDark,
                             onToggleGoal = { 
                                 haptic.performHapticFeedback(HapticFeedbackType.LongPress)
                                 viewModel.toggleGoalCompletion(goalDetails.goal) 
@@ -341,9 +349,9 @@ fun DashboardScreen(
 fun CategoryList(
     categories: List<Category>,
     selectedCategoryId: Long?,
+    isDark: Boolean,
     onCategoryClick: (Long?) -> Unit
 ) {
-    val isDark = isSystemInDarkTheme()
     LazyRow(
         modifier = Modifier
             .fillMaxWidth()
@@ -373,6 +381,7 @@ fun CategoryList(
 @Composable
 fun GoalItem(
     goalDetails: GoalDetails,
+    isDark: Boolean,
     onToggleGoal: () -> Unit,
     onEditGoal: () -> Unit,
     onArchiveGoal: () -> Unit,
@@ -387,7 +396,6 @@ fun GoalItem(
     val milestones = goalDetails.milestones
     var expanded by remember { mutableStateOf(false) }
     var newMilestoneTitle by remember { mutableStateOf("") }
-    val isDark = isSystemInDarkTheme()
 
     val completedMilestones = milestones.count { it.isCompleted }
     val progress = if (milestones.isNotEmpty()) completedMilestones.toFloat() / milestones.size else 0f
@@ -398,7 +406,7 @@ fun GoalItem(
             .padding(horizontal = 24.dp, vertical = 8.dp),
         shape = RoundedCornerShape(24.dp),
         colors = CardDefaults.cardColors(
-            containerColor = if (isDark) Color(0xFF1C1C1E) else Color.White
+            containerColor = MaterialTheme.colorScheme.surface
         ),
         elevation = CardDefaults.cardElevation(defaultElevation = 0.dp)
     ) {
@@ -479,7 +487,7 @@ fun GoalItem(
                         .height(6.dp)
                         .clip(RoundedCornerShape(3.dp)),
                     color = category?.let { Color(it.color) } ?: MaterialTheme.colorScheme.primary,
-                    trackColor = if (isDark) Color(0xFF3A3A3C) else Color(0xFFE5E5EA),
+                    trackColor = MaterialTheme.colorScheme.secondary.copy(alpha = 0.2f),
                     strokeCap = StrokeCap.Round
                 )
             }
@@ -595,15 +603,14 @@ fun GoalItem(
 }
 
 @Composable
-fun AnalyticsOverview(stats: ProgressStats) {
-    val isDark = isSystemInDarkTheme()
+fun AnalyticsOverview(stats: ProgressStats, isDark: Boolean) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = 24.dp, vertical = 8.dp),
         shape = RoundedCornerShape(28.dp),
         colors = CardDefaults.cardColors(
-            containerColor = if (isDark) Color(0xFF1C1C1E) else Color.White
+            containerColor = MaterialTheme.colorScheme.surface
         ),
         elevation = CardDefaults.cardElevation(defaultElevation = 0.dp)
     ) {
@@ -632,6 +639,7 @@ fun AnalyticsOverview(stats: ProgressStats) {
                     current = stats.completedGoals,
                     total = stats.totalGoals,
                     color = Color(0xFF007AFF),
+                    isDark = isDark,
                     modifier = Modifier.weight(1f)
                 )
                 AnalyticsModule(
@@ -639,6 +647,7 @@ fun AnalyticsOverview(stats: ProgressStats) {
                     current = stats.completedMilestones,
                     total = stats.totalMilestones,
                     color = Color(0xFF34C759),
+                    isDark = isDark,
                     modifier = Modifier.weight(1f)
                 )
             }
@@ -647,12 +656,11 @@ fun AnalyticsOverview(stats: ProgressStats) {
 }
 
 @Composable
-fun AnalyticsModule(label: String, current: Int, total: Int, color: Color, modifier: Modifier = Modifier) {
-    val isDark = isSystemInDarkTheme()
+fun AnalyticsModule(label: String, current: Int, total: Int, color: Color, isDark: Boolean, modifier: Modifier = Modifier) {
     Column(
         modifier = modifier
             .clip(RoundedCornerShape(20.dp))
-            .background(if (isDark) Color(0xFF2C2C2E) else Color(0xFFF2F2F7))
+            .background(MaterialTheme.colorScheme.secondary.copy(alpha = if (isDark) 0.15f else 0.05f))
             .padding(16.dp)
     ) {
         Text(text = label, style = MaterialTheme.typography.labelMedium, color = Color.Gray)
@@ -917,4 +925,3 @@ fun AddCategoryDialog(
         }
     )
 }
-

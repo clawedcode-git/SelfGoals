@@ -10,7 +10,8 @@ A high-polish, local-first Android application designed to help you define, trac
 -   **Goal Management:** Create, **edit**, and track goals with detailed descriptions, custom categories, and **Priority** status (marked with a ⭐).
 -   **Milestones (Sub-tasks):** Break down large goals into smaller, actionable milestones with automated progress tracking and **manual reordering** (Up/Down controls).
 -   **Advanced Sorting:** Organize your dashboard by **Deadline**, **Progress**, **Creation Date**, **Name**, or **Priority**.
--   **Custom Theme Control:** Switch between Light, Dark, or System mode independently of device-wide settings via the "More" menu.
+-   **Custom Theme Control:** Robust, independent Light/Dark mode toggle that respects user preference over system settings.
+-   **Build Verified:** Fixed theme consistency issues and confirmed stable build on AVD.
 -   **Goal Archives:** Keep your dashboard focused by archiving completed goals. A dedicated view lets you manage and unarchive your history.
 -   **Search & Filtering:** Dynamic, iOS-style search bar and interactive category tags for instant goal discovery.
 -   **Smart Reminders:** Schedule local notifications using `WorkManager` to stay on top of your deadlines.
