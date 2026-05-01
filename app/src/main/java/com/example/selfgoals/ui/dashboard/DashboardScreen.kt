@@ -79,7 +79,7 @@ fun DashboardScreen(
                     .padding(horizontal = 24.dp, vertical = 12.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Icon(Icons.Default.Add, contentDescription = "Add", color = Color.White)
+                Icon(Icons.Default.Add, contentDescription = "Add", tint = Color.White)
                 Spacer(modifier = Modifier.width(8.dp))
                 Text("New Goal", color = Color.White, fontWeight = FontWeight.Bold)
             }
@@ -419,7 +419,7 @@ fun GoalItem(
                     contentAlignment = Alignment.Center
                 ) {
                     if (goal.isCompleted) {
-                        Icon(Icons.Default.Check, contentDescription = null, color = Color.White, modifier = Modifier.size(20.dp))
+                        Icon(Icons.Default.Check, contentDescription = null, tint = Color.White, modifier = Modifier.size(20.dp))
                     }
                 }
                 
@@ -750,9 +750,9 @@ fun GoalDialog(
                                     text = if (selectedDate != null) dateFormatter.format(Date(selectedDate)) else "Select Deadline",
                                     modifier = Modifier.weight(1f)
                                 )
-                                Icon(Icons.Default.ChevronRight, contentDescription = null, tint = Color.Gray)
+                                Icon(Icons.Default.ChevronRight, contentDescription = null, tint = Color.Gray, modifier = Modifier.size(20.dp))
                             }
-                            Divider(modifier = Modifier.padding(horizontal = 12.dp), alpha = 0.1f)
+                            Divider(modifier = Modifier.padding(horizontal = 12.dp), color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.1f))
                             Row(
                                 verticalAlignment = Alignment.CenterVertically,
                                 modifier = Modifier
@@ -764,7 +764,7 @@ fun GoalDialog(
                                 Text("Reminder", modifier = Modifier.weight(1f))
                                 Switch(checked = setReminder, onCheckedChange = { setReminder = it })
                             }
-                            Divider(modifier = Modifier.padding(horizontal = 12.dp), alpha = 0.1f)
+                            Divider(modifier = Modifier.padding(horizontal = 12.dp), color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.1f))
                             Row(
                                 verticalAlignment = Alignment.CenterVertically,
                                 modifier = Modifier

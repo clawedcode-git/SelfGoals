@@ -1,0 +1,620 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/onyx/workspace/gemini/SelfGoals/app/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /Users/onyx/workspace/gemini/SelfGoals/app/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /Users/onyx/workspace/gemini/SelfGoals/app/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /Users/onyx/workspace/gemini/SelfGoals/app/src/main/AndroidManifest.xml:2:1-24:12
+MERGED from [androidx.work:work-runtime-ktx:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/39b892d1791b1ef3826d611f5e91391b/transformed/work-runtime-ktx-2.9.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:17:1-145:12
+MERGED from [androidx.hilt:hilt-navigation-compose:1.1.0] /Users/onyx/.gradle/caches/9.5.0/transforms/6438d32dbeb7e7cd84aff183e3e1bea5/transformed/hilt-navigation-compose-1.1.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.hilt:hilt-navigation:1.1.0] /Users/onyx/.gradle/caches/9.5.0/transforms/e91c19ade84c23c4fd512606095b40a6/transformed/hilt-navigation-1.1.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-common:2.7.5] /Users/onyx/.gradle/caches/9.5.0/transforms/16dbc4d9eb747ebde0789d4014dd00b8/transformed/navigation-common-2.7.5/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-runtime:2.7.5] /Users/onyx/.gradle/caches/9.5.0/transforms/dd5dcd66bbdb3284878e85df7a6a7c29/transformed/navigation-runtime-2.7.5/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-common-ktx:2.7.5] /Users/onyx/.gradle/caches/9.5.0/transforms/2c47f7ab1e4035d81e5b10bf78059b1e/transformed/navigation-common-ktx-2.7.5/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.7.5] /Users/onyx/.gradle/caches/9.5.0/transforms/57be8d665ad96e19150eb24dfcf2c580/transformed/navigation-runtime-ktx-2.7.5/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-compose:2.7.5] /Users/onyx/.gradle/caches/9.5.0/transforms/2c0dd6a5043a2e05d5f1334c6886ab9d/transformed/navigation-compose-2.7.5/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material3:material3:1.1.1] /Users/onyx/.gradle/caches/9.5.0/transforms/a9680c1f4731a2ab86ff12e4897f1d12/transformed/material3-1.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.dagger:hilt-android:2.48] /Users/onyx/.gradle/caches/9.5.0/transforms/f411df938ac90cdc138e825aa4faa3d7/transformed/hilt-android-2.48/AndroidManifest.xml:16:1-19:12
+MERGED from [androidx.fragment:fragment:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/d83409edad71da1761841487412c8eb0/transformed/fragment-1.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/onyx/.gradle/caches/9.5.0/transforms/80932cfeafaab8016880e9095917ab6d/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.material:material-android:1.5.0] /Users/onyx/.gradle/caches/9.5.0/transforms/6099e119b854490483cd3885070542e2/transformed/material-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-icons-core-android:1.5.0] /Users/onyx/.gradle/caches/9.5.0/transforms/20575ed707345a1fed402dbd0db74eb8/transformed/material-icons-core-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-icons-extended-android:1.5.0] /Users/onyx/.gradle/caches/9.5.0/transforms/fbfe7f7043cee54a9086f672dd40b07a/transformed/material-icons-extended-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-ripple-android:1.5.0] /Users/onyx/.gradle/caches/9.5.0/transforms/b609817341b4422096a9ce8ce0d572a5/transformed/material-ripple-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/1b5706b5535e1b1d612c8420187cc658/transformed/foundation-layout-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/3532c0d5d873b66b2e1630d8b0da9662/transformed/foundation-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-core-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/16da2721e7db58121475b4baaa53d305/transformed/animation-core-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/fd582631a5947158f1f0c81475032b81/transformed/animation-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/01b14480236d855e595fc225cbd75f9a/transformed/ui-tooling-data-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-geometry-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/2ad6111f1c17a5b718ad3111149e2f7c/transformed/ui-geometry-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/cffcb4ae729a624db12d20ec1874a776/transformed/ui-tooling-preview-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.ui:ui-util-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/5d7032f06facf2168a6258e5c60469e9/transformed/ui-util-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-unit-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/1d736549045985ad479f2af98fa248fb/transformed/ui-unit-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-graphics-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/b56557572d0b2ceeebbb078cf59d4aca/transformed/ui-graphics-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-test-manifest:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/f77450501e489e470683b274809bc38d/transformed/ui-test-manifest-1.5.1/AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.compose.ui:ui-text-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/f64be7175c745848b5a0f2dfb3f225c3/transformed/ui-text-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.4.0] /Users/onyx/.gradle/caches/9.5.0/transforms/cb946e06470d94ce8efcf498bd814240/transformed/emoji2-1.4.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/onyx/.gradle/caches/9.5.0/transforms/9fe249330f99baaeca8ff36963f9c7ee/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-service:2.6.2] /Users/onyx/.gradle/caches/9.5.0/transforms/5c1dd6509a901d39a99c7109f2533619/transformed/lifecycle-service-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] /Users/onyx/.gradle/caches/9.5.0/transforms/03627b6e0ac9a76cf3f6b0c6104f2dfd/transformed/lifecycle-livedata-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] /Users/onyx/.gradle/caches/9.5.0/transforms/da0ede3e816408c316549c8379af61c0/transformed/lifecycle-livedata-core-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2] /Users/onyx/.gradle/caches/9.5.0/transforms/6d7ef236699551118bbb5377e3612308/transformed/lifecycle-viewmodel-ktx-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] /Users/onyx/.gradle/caches/9.5.0/transforms/a028d1ad9ad92ab23e61171958753690/transformed/lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/onyx/.gradle/caches/9.5.0/transforms/e6a084c8a4bd5a12fe22e770193fd86b/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/onyx/.gradle/caches/9.5.0/transforms/f1b253cad69e61b7af51aff5bd5e7274/transformed/savedstate-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] /Users/onyx/.gradle/caches/9.5.0/transforms/f59ed3a0c315d727d13213873ff0260e/transformed/lifecycle-viewmodel-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] /Users/onyx/.gradle/caches/9.5.0/transforms/dfc78c51612b669ca64722faf1a11fd5/transformed/lifecycle-runtime-2.6.2/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.2] /Users/onyx/.gradle/caches/9.5.0/transforms/b4423e92bf276e990783a2410bcf1f65/transformed/lifecycle-runtime-ktx-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2] /Users/onyx/.gradle/caches/9.5.0/transforms/b06d96391a6693953ea73a03184d75ad/transformed/lifecycle-viewmodel-compose-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.ui:ui-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/77cd9d290d78e7a57f701f485312cedc/transformed/ui-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/d16ec67f23df2609e04142b617aee14c/transformed/ui-tooling-release/AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.activity:activity-compose:1.8.1] /Users/onyx/.gradle/caches/9.5.0/transforms/ca11f2ada3fae565cd0dda47541af98f/transformed/activity-compose-1.8.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity-ktx:1.8.1] /Users/onyx/.gradle/caches/9.5.0/transforms/cbe3abf548034e52140ac047b199182c/transformed/activity-ktx-1.8.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity:1.8.1] /Users/onyx/.gradle/caches/9.5.0/transforms/8b8dd9cbd790bc5ebe8371f7f1d13465/transformed/activity-1.8.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/onyx/.gradle/caches/9.5.0/transforms/6cde495dfe2bfc1239610080bdf84857/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.autofill:autofill:1.0.0] /Users/onyx/.gradle/caches/9.5.0/transforms/68efca96e3734cd0e9b072ae87e70a8b/transformed/autofill-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.0.0] /Users/onyx/.gradle/caches/9.5.0/transforms/8edae56739621ec2d65029b38e6ae063/transformed/customview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.12.0] /Users/onyx/.gradle/caches/9.5.0/transforms/5c9db74245c8dbb2d1133b022645abab/transformed/core-1.12.0/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/onyx/.gradle/caches/9.5.0/transforms/da309a2d610d2ff9f2663c064e6b260d/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.core:core-ktx:1.12.0] /Users/onyx/.gradle/caches/9.5.0/transforms/7753479a0a297b8d36721ae2fe869217/transformed/core-ktx-1.12.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.room:room-runtime:2.6.1] /Users/onyx/.gradle/caches/9.5.0/transforms/0624f8eff814f9ebe20460e35ce3b371/transformed/room-runtime-2.6.1/AndroidManifest.xml:17:1-31:12
+MERGED from [androidx.room:room-ktx:2.6.1] /Users/onyx/.gradle/caches/9.5.0/transforms/456c31c0beb6e4c240c28c3dc170eb04/transformed/room-ktx-2.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite-framework:2.4.0] /Users/onyx/.gradle/caches/9.5.0/transforms/5e3af555a89272d579d740fd3c73c5ae/transformed/sqlite-framework-2.4.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite:2.4.0] /Users/onyx/.gradle/caches/9.5.0/transforms/799d803a7027e951a7b7dd9d35754d7b/transformed/sqlite-2.4.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/onyx/.gradle/caches/9.5.0/transforms/60a2ece2bdec8ff674be5b3b70638cf8/transformed/annotation-experimental-1.3.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/eb3e817dbd92686dde0f3a3c3626f4c4/transformed/runtime-saveable-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.runtime:runtime-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/a64db73a9d65f3fb5ac06ce0c1a5f126/transformed/runtime-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/onyx/.gradle/caches/9.5.0/transforms/be8492aa63dcb6d35a5edb6520013f50/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/onyx/.gradle/caches/9.5.0/transforms/e711c6981c519f364cfd30deb69ba5d8/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/onyx/.gradle/caches/9.5.0/transforms/9a73df5b2a2ec56badd39c94094d4e17/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/onyx/.gradle/caches/9.5.0/transforms/596b87eb12a659521cebbb4901ed4910/transformed/profileinstaller-1.3.0/AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/onyx/.gradle/caches/9.5.0/transforms/c21ba2bcbd550d644fc14174c2b30597/transformed/startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/onyx/.gradle/caches/9.5.0/transforms/ebecad5008410cb792207e5cc244efc9/transformed/tracing-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.dagger:dagger-lint-aar:2.48] /Users/onyx/.gradle/caches/9.5.0/transforms/46d506d47a61024fec726524c04a00b4/transformed/dagger-lint-aar-2.48/AndroidManifest.xml:16:1-19:12
+	package
+		INJECTED from /Users/onyx/workspace/gemini/SelfGoals/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/onyx/workspace/gemini/SelfGoals/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/onyx/workspace/gemini/SelfGoals/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/onyx/workspace/gemini/SelfGoals/app/src/main/AndroidManifest.xml:2:11-69
+application
+ADDED from /Users/onyx/workspace/gemini/SelfGoals/app/src/main/AndroidManifest.xml:4:5-22:19
+INJECTED from /Users/onyx/workspace/gemini/SelfGoals/app/src/main/AndroidManifest.xml:4:5-22:19
+MERGED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:28:5-143:19
+MERGED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:28:5-143:19
+MERGED from [androidx.compose.ui:ui-test-manifest:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/f77450501e489e470683b274809bc38d/transformed/ui-test-manifest-1.5.1/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.compose.ui:ui-test-manifest:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/f77450501e489e470683b274809bc38d/transformed/ui-test-manifest-1.5.1/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.emoji2:emoji2:1.4.0] /Users/onyx/.gradle/caches/9.5.0/transforms/cb946e06470d94ce8efcf498bd814240/transformed/emoji2-1.4.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.4.0] /Users/onyx/.gradle/caches/9.5.0/transforms/cb946e06470d94ce8efcf498bd814240/transformed/emoji2-1.4.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/onyx/.gradle/caches/9.5.0/transforms/9fe249330f99baaeca8ff36963f9c7ee/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/onyx/.gradle/caches/9.5.0/transforms/9fe249330f99baaeca8ff36963f9c7ee/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.compose.ui:ui-tooling-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/d16ec67f23df2609e04142b617aee14c/transformed/ui-tooling-release/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.compose.ui:ui-tooling-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/d16ec67f23df2609e04142b617aee14c/transformed/ui-tooling-release/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.core:core:1.12.0] /Users/onyx/.gradle/caches/9.5.0/transforms/5c9db74245c8dbb2d1133b022645abab/transformed/core-1.12.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.12.0] /Users/onyx/.gradle/caches/9.5.0/transforms/5c9db74245c8dbb2d1133b022645abab/transformed/core-1.12.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.room:room-runtime:2.6.1] /Users/onyx/.gradle/caches/9.5.0/transforms/0624f8eff814f9ebe20460e35ce3b371/transformed/room-runtime-2.6.1/AndroidManifest.xml:23:5-29:19
+MERGED from [androidx.room:room-runtime:2.6.1] /Users/onyx/.gradle/caches/9.5.0/transforms/0624f8eff814f9ebe20460e35ce3b371/transformed/room-runtime-2.6.1/AndroidManifest.xml:23:5-29:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/onyx/.gradle/caches/9.5.0/transforms/9a73df5b2a2ec56badd39c94094d4e17/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/onyx/.gradle/caches/9.5.0/transforms/9a73df5b2a2ec56badd39c94094d4e17/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/onyx/.gradle/caches/9.5.0/transforms/596b87eb12a659521cebbb4901ed4910/transformed/profileinstaller-1.3.0/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/onyx/.gradle/caches/9.5.0/transforms/596b87eb12a659521cebbb4901ed4910/transformed/profileinstaller-1.3.0/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/onyx/.gradle/caches/9.5.0/transforms/c21ba2bcbd550d644fc14174c2b30597/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/onyx/.gradle/caches/9.5.0/transforms/c21ba2bcbd550d644fc14174c2b30597/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+	android:extractNativeLibs
+		INJECTED from /Users/onyx/workspace/gemini/SelfGoals/app/src/main/AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.12.0] /Users/onyx/.gradle/caches/9.5.0/transforms/5c9db74245c8dbb2d1133b022645abab/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
+	android:supportsRtl
+		ADDED from /Users/onyx/workspace/gemini/SelfGoals/app/src/main/AndroidManifest.xml:10:9-35
+	android:label
+		ADDED from /Users/onyx/workspace/gemini/SelfGoals/app/src/main/AndroidManifest.xml:8:9-34
+	android:roundIcon
+		ADDED from /Users/onyx/workspace/gemini/SelfGoals/app/src/main/AndroidManifest.xml:9:9-55
+	android:icon
+		ADDED from /Users/onyx/workspace/gemini/SelfGoals/app/src/main/AndroidManifest.xml:7:9-50
+	android:allowBackup
+		ADDED from /Users/onyx/workspace/gemini/SelfGoals/app/src/main/AndroidManifest.xml:6:9-35
+	android:theme
+		ADDED from /Users/onyx/workspace/gemini/SelfGoals/app/src/main/AndroidManifest.xml:11:9-72
+	android:name
+		ADDED from /Users/onyx/workspace/gemini/SelfGoals/app/src/main/AndroidManifest.xml:5:9-37
+activity#com.example.selfgoals.MainActivity
+ADDED from /Users/onyx/workspace/gemini/SelfGoals/app/src/main/AndroidManifest.xml:13:9-21:20
+	android:exported
+		ADDED from /Users/onyx/workspace/gemini/SelfGoals/app/src/main/AndroidManifest.xml:15:13-36
+	android:theme
+		ADDED from /Users/onyx/workspace/gemini/SelfGoals/app/src/main/AndroidManifest.xml:16:13-76
+	android:name
+		ADDED from /Users/onyx/workspace/gemini/SelfGoals/app/src/main/AndroidManifest.xml:14:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/onyx/workspace/gemini/SelfGoals/app/src/main/AndroidManifest.xml:17:13-20:29
+action#android.intent.action.MAIN
+ADDED from /Users/onyx/workspace/gemini/SelfGoals/app/src/main/AndroidManifest.xml:18:17-69
+	android:name
+		ADDED from /Users/onyx/workspace/gemini/SelfGoals/app/src/main/AndroidManifest.xml:18:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/onyx/workspace/gemini/SelfGoals/app/src/main/AndroidManifest.xml:19:17-77
+	android:name
+		ADDED from /Users/onyx/workspace/gemini/SelfGoals/app/src/main/AndroidManifest.xml:19:27-74
+uses-sdk
+INJECTED from /Users/onyx/workspace/gemini/SelfGoals/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/onyx/workspace/gemini/SelfGoals/app/src/main/AndroidManifest.xml
+INJECTED from /Users/onyx/workspace/gemini/SelfGoals/app/src/main/AndroidManifest.xml
+MERGED from [androidx.work:work-runtime-ktx:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/39b892d1791b1ef3826d611f5e91391b/transformed/work-runtime-ktx-2.9.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.work:work-runtime-ktx:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/39b892d1791b1ef3826d611f5e91391b/transformed/work-runtime-ktx-2.9.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.hilt:hilt-navigation-compose:1.1.0] /Users/onyx/.gradle/caches/9.5.0/transforms/6438d32dbeb7e7cd84aff183e3e1bea5/transformed/hilt-navigation-compose-1.1.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.hilt:hilt-navigation-compose:1.1.0] /Users/onyx/.gradle/caches/9.5.0/transforms/6438d32dbeb7e7cd84aff183e3e1bea5/transformed/hilt-navigation-compose-1.1.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.hilt:hilt-navigation:1.1.0] /Users/onyx/.gradle/caches/9.5.0/transforms/e91c19ade84c23c4fd512606095b40a6/transformed/hilt-navigation-1.1.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.hilt:hilt-navigation:1.1.0] /Users/onyx/.gradle/caches/9.5.0/transforms/e91c19ade84c23c4fd512606095b40a6/transformed/hilt-navigation-1.1.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-common:2.7.5] /Users/onyx/.gradle/caches/9.5.0/transforms/16dbc4d9eb747ebde0789d4014dd00b8/transformed/navigation-common-2.7.5/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common:2.7.5] /Users/onyx/.gradle/caches/9.5.0/transforms/16dbc4d9eb747ebde0789d4014dd00b8/transformed/navigation-common-2.7.5/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime:2.7.5] /Users/onyx/.gradle/caches/9.5.0/transforms/dd5dcd66bbdb3284878e85df7a6a7c29/transformed/navigation-runtime-2.7.5/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime:2.7.5] /Users/onyx/.gradle/caches/9.5.0/transforms/dd5dcd66bbdb3284878e85df7a6a7c29/transformed/navigation-runtime-2.7.5/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common-ktx:2.7.5] /Users/onyx/.gradle/caches/9.5.0/transforms/2c47f7ab1e4035d81e5b10bf78059b1e/transformed/navigation-common-ktx-2.7.5/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-common-ktx:2.7.5] /Users/onyx/.gradle/caches/9.5.0/transforms/2c47f7ab1e4035d81e5b10bf78059b1e/transformed/navigation-common-ktx-2.7.5/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.7.5] /Users/onyx/.gradle/caches/9.5.0/transforms/57be8d665ad96e19150eb24dfcf2c580/transformed/navigation-runtime-ktx-2.7.5/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.7.5] /Users/onyx/.gradle/caches/9.5.0/transforms/57be8d665ad96e19150eb24dfcf2c580/transformed/navigation-runtime-ktx-2.7.5/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-compose:2.7.5] /Users/onyx/.gradle/caches/9.5.0/transforms/2c0dd6a5043a2e05d5f1334c6886ab9d/transformed/navigation-compose-2.7.5/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-compose:2.7.5] /Users/onyx/.gradle/caches/9.5.0/transforms/2c0dd6a5043a2e05d5f1334c6886ab9d/transformed/navigation-compose-2.7.5/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material3:material3:1.1.1] /Users/onyx/.gradle/caches/9.5.0/transforms/a9680c1f4731a2ab86ff12e4897f1d12/transformed/material3-1.1.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material3:material3:1.1.1] /Users/onyx/.gradle/caches/9.5.0/transforms/a9680c1f4731a2ab86ff12e4897f1d12/transformed/material3-1.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.dagger:hilt-android:2.48] /Users/onyx/.gradle/caches/9.5.0/transforms/f411df938ac90cdc138e825aa4faa3d7/transformed/hilt-android-2.48/AndroidManifest.xml:18:3-42
+MERGED from [com.google.dagger:hilt-android:2.48] /Users/onyx/.gradle/caches/9.5.0/transforms/f411df938ac90cdc138e825aa4faa3d7/transformed/hilt-android-2.48/AndroidManifest.xml:18:3-42
+MERGED from [androidx.fragment:fragment:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/d83409edad71da1761841487412c8eb0/transformed/fragment-1.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/d83409edad71da1761841487412c8eb0/transformed/fragment-1.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.loader:loader:1.0.0] /Users/onyx/.gradle/caches/9.5.0/transforms/80932cfeafaab8016880e9095917ab6d/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/onyx/.gradle/caches/9.5.0/transforms/80932cfeafaab8016880e9095917ab6d/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material:material-android:1.5.0] /Users/onyx/.gradle/caches/9.5.0/transforms/6099e119b854490483cd3885070542e2/transformed/material-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-android:1.5.0] /Users/onyx/.gradle/caches/9.5.0/transforms/6099e119b854490483cd3885070542e2/transformed/material-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-core-android:1.5.0] /Users/onyx/.gradle/caches/9.5.0/transforms/20575ed707345a1fed402dbd0db74eb8/transformed/material-icons-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-core-android:1.5.0] /Users/onyx/.gradle/caches/9.5.0/transforms/20575ed707345a1fed402dbd0db74eb8/transformed/material-icons-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-extended-android:1.5.0] /Users/onyx/.gradle/caches/9.5.0/transforms/fbfe7f7043cee54a9086f672dd40b07a/transformed/material-icons-extended-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-extended-android:1.5.0] /Users/onyx/.gradle/caches/9.5.0/transforms/fbfe7f7043cee54a9086f672dd40b07a/transformed/material-icons-extended-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-ripple-android:1.5.0] /Users/onyx/.gradle/caches/9.5.0/transforms/b609817341b4422096a9ce8ce0d572a5/transformed/material-ripple-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-ripple-android:1.5.0] /Users/onyx/.gradle/caches/9.5.0/transforms/b609817341b4422096a9ce8ce0d572a5/transformed/material-ripple-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/1b5706b5535e1b1d612c8420187cc658/transformed/foundation-layout-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/1b5706b5535e1b1d612c8420187cc658/transformed/foundation-layout-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/3532c0d5d873b66b2e1630d8b0da9662/transformed/foundation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/3532c0d5d873b66b2e1630d8b0da9662/transformed/foundation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/16da2721e7db58121475b4baaa53d305/transformed/animation-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/16da2721e7db58121475b4baaa53d305/transformed/animation-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/fd582631a5947158f1f0c81475032b81/transformed/animation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/fd582631a5947158f1f0c81475032b81/transformed/animation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/01b14480236d855e595fc225cbd75f9a/transformed/ui-tooling-data-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/01b14480236d855e595fc225cbd75f9a/transformed/ui-tooling-data-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/2ad6111f1c17a5b718ad3111149e2f7c/transformed/ui-geometry-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/2ad6111f1c17a5b718ad3111149e2f7c/transformed/ui-geometry-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/cffcb4ae729a624db12d20ec1874a776/transformed/ui-tooling-preview-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/cffcb4ae729a624db12d20ec1874a776/transformed/ui-tooling-preview-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/5d7032f06facf2168a6258e5c60469e9/transformed/ui-util-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/5d7032f06facf2168a6258e5c60469e9/transformed/ui-util-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/1d736549045985ad479f2af98fa248fb/transformed/ui-unit-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/1d736549045985ad479f2af98fa248fb/transformed/ui-unit-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/b56557572d0b2ceeebbb078cf59d4aca/transformed/ui-graphics-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/b56557572d0b2ceeebbb078cf59d4aca/transformed/ui-graphics-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-test-manifest:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/f77450501e489e470683b274809bc38d/transformed/ui-test-manifest-1.5.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-test-manifest:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/f77450501e489e470683b274809bc38d/transformed/ui-test-manifest-1.5.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/f64be7175c745848b5a0f2dfb3f225c3/transformed/ui-text-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/f64be7175c745848b5a0f2dfb3f225c3/transformed/ui-text-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.4.0] /Users/onyx/.gradle/caches/9.5.0/transforms/cb946e06470d94ce8efcf498bd814240/transformed/emoji2-1.4.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.4.0] /Users/onyx/.gradle/caches/9.5.0/transforms/cb946e06470d94ce8efcf498bd814240/transformed/emoji2-1.4.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/onyx/.gradle/caches/9.5.0/transforms/9fe249330f99baaeca8ff36963f9c7ee/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/onyx/.gradle/caches/9.5.0/transforms/9fe249330f99baaeca8ff36963f9c7ee/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.6.2] /Users/onyx/.gradle/caches/9.5.0/transforms/5c1dd6509a901d39a99c7109f2533619/transformed/lifecycle-service-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.6.2] /Users/onyx/.gradle/caches/9.5.0/transforms/5c1dd6509a901d39a99c7109f2533619/transformed/lifecycle-service-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] /Users/onyx/.gradle/caches/9.5.0/transforms/03627b6e0ac9a76cf3f6b0c6104f2dfd/transformed/lifecycle-livedata-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] /Users/onyx/.gradle/caches/9.5.0/transforms/03627b6e0ac9a76cf3f6b0c6104f2dfd/transformed/lifecycle-livedata-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] /Users/onyx/.gradle/caches/9.5.0/transforms/da0ede3e816408c316549c8379af61c0/transformed/lifecycle-livedata-core-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] /Users/onyx/.gradle/caches/9.5.0/transforms/da0ede3e816408c316549c8379af61c0/transformed/lifecycle-livedata-core-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2] /Users/onyx/.gradle/caches/9.5.0/transforms/6d7ef236699551118bbb5377e3612308/transformed/lifecycle-viewmodel-ktx-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2] /Users/onyx/.gradle/caches/9.5.0/transforms/6d7ef236699551118bbb5377e3612308/transformed/lifecycle-viewmodel-ktx-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] /Users/onyx/.gradle/caches/9.5.0/transforms/a028d1ad9ad92ab23e61171958753690/transformed/lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] /Users/onyx/.gradle/caches/9.5.0/transforms/a028d1ad9ad92ab23e61171958753690/transformed/lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/onyx/.gradle/caches/9.5.0/transforms/e6a084c8a4bd5a12fe22e770193fd86b/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/onyx/.gradle/caches/9.5.0/transforms/e6a084c8a4bd5a12fe22e770193fd86b/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/onyx/.gradle/caches/9.5.0/transforms/f1b253cad69e61b7af51aff5bd5e7274/transformed/savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/onyx/.gradle/caches/9.5.0/transforms/f1b253cad69e61b7af51aff5bd5e7274/transformed/savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] /Users/onyx/.gradle/caches/9.5.0/transforms/f59ed3a0c315d727d13213873ff0260e/transformed/lifecycle-viewmodel-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] /Users/onyx/.gradle/caches/9.5.0/transforms/f59ed3a0c315d727d13213873ff0260e/transformed/lifecycle-viewmodel-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] /Users/onyx/.gradle/caches/9.5.0/transforms/dfc78c51612b669ca64722faf1a11fd5/transformed/lifecycle-runtime-2.6.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] /Users/onyx/.gradle/caches/9.5.0/transforms/dfc78c51612b669ca64722faf1a11fd5/transformed/lifecycle-runtime-2.6.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.2] /Users/onyx/.gradle/caches/9.5.0/transforms/b4423e92bf276e990783a2410bcf1f65/transformed/lifecycle-runtime-ktx-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.2] /Users/onyx/.gradle/caches/9.5.0/transforms/b4423e92bf276e990783a2410bcf1f65/transformed/lifecycle-runtime-ktx-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2] /Users/onyx/.gradle/caches/9.5.0/transforms/b06d96391a6693953ea73a03184d75ad/transformed/lifecycle-viewmodel-compose-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2] /Users/onyx/.gradle/caches/9.5.0/transforms/b06d96391a6693953ea73a03184d75ad/transformed/lifecycle-viewmodel-compose-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/77cd9d290d78e7a57f701f485312cedc/transformed/ui-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/77cd9d290d78e7a57f701f485312cedc/transformed/ui-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/d16ec67f23df2609e04142b617aee14c/transformed/ui-tooling-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/d16ec67f23df2609e04142b617aee14c/transformed/ui-tooling-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-compose:1.8.1] /Users/onyx/.gradle/caches/9.5.0/transforms/ca11f2ada3fae565cd0dda47541af98f/transformed/activity-compose-1.8.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-compose:1.8.1] /Users/onyx/.gradle/caches/9.5.0/transforms/ca11f2ada3fae565cd0dda47541af98f/transformed/activity-compose-1.8.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.8.1] /Users/onyx/.gradle/caches/9.5.0/transforms/cbe3abf548034e52140ac047b199182c/transformed/activity-ktx-1.8.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.8.1] /Users/onyx/.gradle/caches/9.5.0/transforms/cbe3abf548034e52140ac047b199182c/transformed/activity-ktx-1.8.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity:1.8.1] /Users/onyx/.gradle/caches/9.5.0/transforms/8b8dd9cbd790bc5ebe8371f7f1d13465/transformed/activity-1.8.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.8.1] /Users/onyx/.gradle/caches/9.5.0/transforms/8b8dd9cbd790bc5ebe8371f7f1d13465/transformed/activity-1.8.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/onyx/.gradle/caches/9.5.0/transforms/6cde495dfe2bfc1239610080bdf84857/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/onyx/.gradle/caches/9.5.0/transforms/6cde495dfe2bfc1239610080bdf84857/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.autofill:autofill:1.0.0] /Users/onyx/.gradle/caches/9.5.0/transforms/68efca96e3734cd0e9b072ae87e70a8b/transformed/autofill-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.0.0] /Users/onyx/.gradle/caches/9.5.0/transforms/68efca96e3734cd0e9b072ae87e70a8b/transformed/autofill-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.0.0] /Users/onyx/.gradle/caches/9.5.0/transforms/8edae56739621ec2d65029b38e6ae063/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/onyx/.gradle/caches/9.5.0/transforms/8edae56739621ec2d65029b38e6ae063/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.12.0] /Users/onyx/.gradle/caches/9.5.0/transforms/5c9db74245c8dbb2d1133b022645abab/transformed/core-1.12.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.12.0] /Users/onyx/.gradle/caches/9.5.0/transforms/5c9db74245c8dbb2d1133b022645abab/transformed/core-1.12.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/onyx/.gradle/caches/9.5.0/transforms/da309a2d610d2ff9f2663c064e6b260d/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/onyx/.gradle/caches/9.5.0/transforms/da309a2d610d2ff9f2663c064e6b260d/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.core:core-ktx:1.12.0] /Users/onyx/.gradle/caches/9.5.0/transforms/7753479a0a297b8d36721ae2fe869217/transformed/core-ktx-1.12.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.12.0] /Users/onyx/.gradle/caches/9.5.0/transforms/7753479a0a297b8d36721ae2fe869217/transformed/core-ktx-1.12.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.room:room-runtime:2.6.1] /Users/onyx/.gradle/caches/9.5.0/transforms/0624f8eff814f9ebe20460e35ce3b371/transformed/room-runtime-2.6.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.room:room-runtime:2.6.1] /Users/onyx/.gradle/caches/9.5.0/transforms/0624f8eff814f9ebe20460e35ce3b371/transformed/room-runtime-2.6.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.room:room-ktx:2.6.1] /Users/onyx/.gradle/caches/9.5.0/transforms/456c31c0beb6e4c240c28c3dc170eb04/transformed/room-ktx-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.room:room-ktx:2.6.1] /Users/onyx/.gradle/caches/9.5.0/transforms/456c31c0beb6e4c240c28c3dc170eb04/transformed/room-ktx-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.4.0] /Users/onyx/.gradle/caches/9.5.0/transforms/5e3af555a89272d579d740fd3c73c5ae/transformed/sqlite-framework-2.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.4.0] /Users/onyx/.gradle/caches/9.5.0/transforms/5e3af555a89272d579d740fd3c73c5ae/transformed/sqlite-framework-2.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.4.0] /Users/onyx/.gradle/caches/9.5.0/transforms/799d803a7027e951a7b7dd9d35754d7b/transformed/sqlite-2.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.4.0] /Users/onyx/.gradle/caches/9.5.0/transforms/799d803a7027e951a7b7dd9d35754d7b/transformed/sqlite-2.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/onyx/.gradle/caches/9.5.0/transforms/60a2ece2bdec8ff674be5b3b70638cf8/transformed/annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/onyx/.gradle/caches/9.5.0/transforms/60a2ece2bdec8ff674be5b3b70638cf8/transformed/annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/eb3e817dbd92686dde0f3a3c3626f4c4/transformed/runtime-saveable-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/eb3e817dbd92686dde0f3a3c3626f4c4/transformed/runtime-saveable-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/a64db73a9d65f3fb5ac06ce0c1a5f126/transformed/runtime-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/a64db73a9d65f3fb5ac06ce0c1a5f126/transformed/runtime-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/onyx/.gradle/caches/9.5.0/transforms/be8492aa63dcb6d35a5edb6520013f50/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/onyx/.gradle/caches/9.5.0/transforms/be8492aa63dcb6d35a5edb6520013f50/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/onyx/.gradle/caches/9.5.0/transforms/e711c6981c519f364cfd30deb69ba5d8/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/onyx/.gradle/caches/9.5.0/transforms/e711c6981c519f364cfd30deb69ba5d8/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/onyx/.gradle/caches/9.5.0/transforms/9a73df5b2a2ec56badd39c94094d4e17/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/onyx/.gradle/caches/9.5.0/transforms/9a73df5b2a2ec56badd39c94094d4e17/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/onyx/.gradle/caches/9.5.0/transforms/596b87eb12a659521cebbb4901ed4910/transformed/profileinstaller-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/onyx/.gradle/caches/9.5.0/transforms/596b87eb12a659521cebbb4901ed4910/transformed/profileinstaller-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/onyx/.gradle/caches/9.5.0/transforms/c21ba2bcbd550d644fc14174c2b30597/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/onyx/.gradle/caches/9.5.0/transforms/c21ba2bcbd550d644fc14174c2b30597/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/onyx/.gradle/caches/9.5.0/transforms/ebecad5008410cb792207e5cc244efc9/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/onyx/.gradle/caches/9.5.0/transforms/ebecad5008410cb792207e5cc244efc9/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.dagger:dagger-lint-aar:2.48] /Users/onyx/.gradle/caches/9.5.0/transforms/46d506d47a61024fec726524c04a00b4/transformed/dagger-lint-aar-2.48/AndroidManifest.xml:18:3-42
+MERGED from [com.google.dagger:dagger-lint-aar:2.48] /Users/onyx/.gradle/caches/9.5.0/transforms/46d506d47a61024fec726524c04a00b4/transformed/dagger-lint-aar-2.48/AndroidManifest.xml:18:3-42
+	android:targetSdkVersion
+		INJECTED from /Users/onyx/workspace/gemini/SelfGoals/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/onyx/workspace/gemini/SelfGoals/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:23:5-68
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:23:22-65
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:24:5-79
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:24:22-76
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:25:5-81
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:25:22-78
+uses-permission#android.permission.FOREGROUND_SERVICE
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:26:5-77
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:26:22-74
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:29:9-37:20
+MERGED from [androidx.emoji2:emoji2:1.4.0] /Users/onyx/.gradle/caches/9.5.0/transforms/cb946e06470d94ce8efcf498bd814240/transformed/emoji2-1.4.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.emoji2:emoji2:1.4.0] /Users/onyx/.gradle/caches/9.5.0/transforms/cb946e06470d94ce8efcf498bd814240/transformed/emoji2-1.4.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/onyx/.gradle/caches/9.5.0/transforms/9fe249330f99baaeca8ff36963f9c7ee/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/onyx/.gradle/caches/9.5.0/transforms/9fe249330f99baaeca8ff36963f9c7ee/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/onyx/.gradle/caches/9.5.0/transforms/596b87eb12a659521cebbb4901ed4910/transformed/profileinstaller-1.3.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/onyx/.gradle/caches/9.5.0/transforms/596b87eb12a659521cebbb4901ed4910/transformed/profileinstaller-1.3.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/onyx/.gradle/caches/9.5.0/transforms/c21ba2bcbd550d644fc14174c2b30597/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/onyx/.gradle/caches/9.5.0/transforms/c21ba2bcbd550d644fc14174c2b30597/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:33:13-31
+	android:authorities
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:31:13-68
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:32:13-37
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:30:13-67
+meta-data#androidx.work.WorkManagerInitializer
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:34:13-36:52
+	android:value
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:36:17-49
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:35:17-68
+service#androidx.work.impl.background.systemalarm.SystemAlarmService
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:39:9-45:35
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:42:13-72
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:43:13-37
+	tools:ignore
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:44:13-60
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:45:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:41:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:40:13-88
+service#androidx.work.impl.background.systemjob.SystemJobService
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:46:9-52:35
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:49:13-70
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:50:13-36
+	android:permission
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:51:13-69
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:52:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:48:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:47:13-84
+service#androidx.work.impl.foreground.SystemForegroundService
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:53:9-59:35
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:56:13-77
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:57:13-37
+	tools:ignore
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:58:13-60
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:59:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:55:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:54:13-81
+receiver#androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:61:9-66:35
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:64:13-35
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:65:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:66:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:63:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:62:13-88
+receiver#androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:67:9-77:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:70:13-36
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:71:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:72:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:69:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:68:13-106
+intent-filter#action:name:android.intent.action.ACTION_POWER_CONNECTED+action:name:android.intent.action.ACTION_POWER_DISCONNECTED
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:73:13-76:29
+action#android.intent.action.ACTION_POWER_CONNECTED
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:74:17-87
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:74:25-84
+action#android.intent.action.ACTION_POWER_DISCONNECTED
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:75:17-90
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:75:25-87
+receiver#androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:78:9-88:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:81:13-36
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:82:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:83:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:80:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:79:13-104
+intent-filter#action:name:android.intent.action.BATTERY_LOW+action:name:android.intent.action.BATTERY_OKAY
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:84:13-87:29
+action#android.intent.action.BATTERY_OKAY
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:85:17-77
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:85:25-74
+action#android.intent.action.BATTERY_LOW
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:86:17-76
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:86:25-73
+receiver#androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:89:9-99:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:92:13-36
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:93:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:94:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:91:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:90:13-104
+intent-filter#action:name:android.intent.action.DEVICE_STORAGE_LOW+action:name:android.intent.action.DEVICE_STORAGE_OK
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:95:13-98:29
+action#android.intent.action.DEVICE_STORAGE_LOW
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:96:17-83
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:96:25-80
+action#android.intent.action.DEVICE_STORAGE_OK
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:97:17-82
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:97:25-79
+receiver#androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:100:9-109:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:103:13-36
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:104:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:105:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:102:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:101:13-103
+intent-filter#action:name:android.net.conn.CONNECTIVITY_CHANGE
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:106:13-108:29
+action#android.net.conn.CONNECTIVITY_CHANGE
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:107:17-79
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:107:25-76
+receiver#androidx.work.impl.background.systemalarm.RescheduleReceiver
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:110:9-121:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:113:13-36
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:114:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:115:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:112:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:111:13-88
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED+action:name:android.intent.action.TIMEZONE_CHANGED+action:name:android.intent.action.TIME_SET
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:116:13-120:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:117:17-79
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:117:25-76
+action#android.intent.action.TIME_SET
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:118:17-73
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:118:25-70
+action#android.intent.action.TIMEZONE_CHANGED
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:119:17-81
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:119:25-78
+receiver#androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:122:9-131:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:125:13-72
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:126:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:127:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:124:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:123:13-99
+intent-filter#action:name:androidx.work.impl.background.systemalarm.UpdateProxies
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:128:13-130:29
+action#androidx.work.impl.background.systemalarm.UpdateProxies
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:129:17-98
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:129:25-95
+receiver#androidx.work.impl.diagnostics.DiagnosticsReceiver
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:132:9-142:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:135:13-35
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:136:13-36
+	android:permission
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:137:13-57
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:138:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:134:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:133:13-78
+intent-filter#action:name:androidx.work.diagnostics.REQUEST_DIAGNOSTICS
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:139:13-141:29
+action#androidx.work.diagnostics.REQUEST_DIAGNOSTICS
+ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:140:17-88
+	android:name
+		ADDED from [androidx.work:work-runtime:2.9.0] /Users/onyx/.gradle/caches/9.5.0/transforms/0bc48aba0c74cffcb6ed5fb32a620c88/transformed/work-runtime-2.9.0/AndroidManifest.xml:140:25-85
+activity#androidx.activity.ComponentActivity
+ADDED from [androidx.compose.ui:ui-test-manifest:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/f77450501e489e470683b274809bc38d/transformed/ui-test-manifest-1.5.1/AndroidManifest.xml:23:9-25:39
+	android:exported
+		ADDED from [androidx.compose.ui:ui-test-manifest:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/f77450501e489e470683b274809bc38d/transformed/ui-test-manifest-1.5.1/AndroidManifest.xml:25:13-36
+	android:name
+		ADDED from [androidx.compose.ui:ui-test-manifest:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/f77450501e489e470683b274809bc38d/transformed/ui-test-manifest-1.5.1/AndroidManifest.xml:24:13-63
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.4.0] /Users/onyx/.gradle/caches/9.5.0/transforms/cb946e06470d94ce8efcf498bd814240/transformed/emoji2-1.4.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.4.0] /Users/onyx/.gradle/caches/9.5.0/transforms/cb946e06470d94ce8efcf498bd814240/transformed/emoji2-1.4.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.4.0] /Users/onyx/.gradle/caches/9.5.0/transforms/cb946e06470d94ce8efcf498bd814240/transformed/emoji2-1.4.0/AndroidManifest.xml:30:17-75
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/onyx/.gradle/caches/9.5.0/transforms/9fe249330f99baaeca8ff36963f9c7ee/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/onyx/.gradle/caches/9.5.0/transforms/9fe249330f99baaeca8ff36963f9c7ee/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/onyx/.gradle/caches/9.5.0/transforms/9fe249330f99baaeca8ff36963f9c7ee/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
+activity#androidx.compose.ui.tooling.PreviewActivity
+ADDED from [androidx.compose.ui:ui-tooling-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/d16ec67f23df2609e04142b617aee14c/transformed/ui-tooling-release/AndroidManifest.xml:23:9-25:39
+	android:exported
+		ADDED from [androidx.compose.ui:ui-tooling-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/d16ec67f23df2609e04142b617aee14c/transformed/ui-tooling-release/AndroidManifest.xml:25:13-36
+	android:name
+		ADDED from [androidx.compose.ui:ui-tooling-android:1.5.1] /Users/onyx/.gradle/caches/9.5.0/transforms/d16ec67f23df2609e04142b617aee14c/transformed/ui-tooling-release/AndroidManifest.xml:24:13-71
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /Users/onyx/.gradle/caches/9.5.0/transforms/5c9db74245c8dbb2d1133b022645abab/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.12.0] /Users/onyx/.gradle/caches/9.5.0/transforms/5c9db74245c8dbb2d1133b022645abab/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /Users/onyx/.gradle/caches/9.5.0/transforms/5c9db74245c8dbb2d1133b022645abab/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+permission#com.example.selfgoals.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /Users/onyx/.gradle/caches/9.5.0/transforms/5c9db74245c8dbb2d1133b022645abab/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.12.0] /Users/onyx/.gradle/caches/9.5.0/transforms/5c9db74245c8dbb2d1133b022645abab/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /Users/onyx/.gradle/caches/9.5.0/transforms/5c9db74245c8dbb2d1133b022645abab/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /Users/onyx/.gradle/caches/9.5.0/transforms/5c9db74245c8dbb2d1133b022645abab/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /Users/onyx/.gradle/caches/9.5.0/transforms/5c9db74245c8dbb2d1133b022645abab/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+uses-permission#com.example.selfgoals.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /Users/onyx/.gradle/caches/9.5.0/transforms/5c9db74245c8dbb2d1133b022645abab/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /Users/onyx/.gradle/caches/9.5.0/transforms/5c9db74245c8dbb2d1133b022645abab/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+service#androidx.room.MultiInstanceInvalidationService
+ADDED from [androidx.room:room-runtime:2.6.1] /Users/onyx/.gradle/caches/9.5.0/transforms/0624f8eff814f9ebe20460e35ce3b371/transformed/room-runtime-2.6.1/AndroidManifest.xml:24:9-28:63
+	android:exported
+		ADDED from [androidx.room:room-runtime:2.6.1] /Users/onyx/.gradle/caches/9.5.0/transforms/0624f8eff814f9ebe20460e35ce3b371/transformed/room-runtime-2.6.1/AndroidManifest.xml:27:13-37
+	tools:ignore
+		ADDED from [androidx.room:room-runtime:2.6.1] /Users/onyx/.gradle/caches/9.5.0/transforms/0624f8eff814f9ebe20460e35ce3b371/transformed/room-runtime-2.6.1/AndroidManifest.xml:28:13-60
+	android:directBootAware
+		ADDED from [androidx.room:room-runtime:2.6.1] /Users/onyx/.gradle/caches/9.5.0/transforms/0624f8eff814f9ebe20460e35ce3b371/transformed/room-runtime-2.6.1/AndroidManifest.xml:26:13-43
+	android:name
+		ADDED from [androidx.room:room-runtime:2.6.1] /Users/onyx/.gradle/caches/9.5.0/transforms/0624f8eff814f9ebe20460e35ce3b371/transformed/room-runtime-2.6.1/AndroidManifest.xml:25:13-74
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/onyx/.gradle/caches/9.5.0/transforms/596b87eb12a659521cebbb4901ed4910/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/onyx/.gradle/caches/9.5.0/transforms/596b87eb12a659521cebbb4901ed4910/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/onyx/.gradle/caches/9.5.0/transforms/596b87eb12a659521cebbb4901ed4910/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/onyx/.gradle/caches/9.5.0/transforms/596b87eb12a659521cebbb4901ed4910/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/onyx/.gradle/caches/9.5.0/transforms/596b87eb12a659521cebbb4901ed4910/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/onyx/.gradle/caches/9.5.0/transforms/596b87eb12a659521cebbb4901ed4910/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/onyx/.gradle/caches/9.5.0/transforms/596b87eb12a659521cebbb4901ed4910/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/onyx/.gradle/caches/9.5.0/transforms/596b87eb12a659521cebbb4901ed4910/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/onyx/.gradle/caches/9.5.0/transforms/596b87eb12a659521cebbb4901ed4910/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/onyx/.gradle/caches/9.5.0/transforms/596b87eb12a659521cebbb4901ed4910/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/onyx/.gradle/caches/9.5.0/transforms/596b87eb12a659521cebbb4901ed4910/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/onyx/.gradle/caches/9.5.0/transforms/596b87eb12a659521cebbb4901ed4910/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/onyx/.gradle/caches/9.5.0/transforms/596b87eb12a659521cebbb4901ed4910/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/onyx/.gradle/caches/9.5.0/transforms/596b87eb12a659521cebbb4901ed4910/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/onyx/.gradle/caches/9.5.0/transforms/596b87eb12a659521cebbb4901ed4910/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/onyx/.gradle/caches/9.5.0/transforms/596b87eb12a659521cebbb4901ed4910/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/onyx/.gradle/caches/9.5.0/transforms/596b87eb12a659521cebbb4901ed4910/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/onyx/.gradle/caches/9.5.0/transforms/596b87eb12a659521cebbb4901ed4910/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/onyx/.gradle/caches/9.5.0/transforms/596b87eb12a659521cebbb4901ed4910/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/onyx/.gradle/caches/9.5.0/transforms/596b87eb12a659521cebbb4901ed4910/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/onyx/.gradle/caches/9.5.0/transforms/596b87eb12a659521cebbb4901ed4910/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92

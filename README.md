@@ -7,24 +7,26 @@ A high-polish, local-first Android application designed to help you define, trac
 -   **iOS 18 Design Language:** Modular "widget" layouts, glassmorphism, bold typography, and fluid squircle shapes.
 -   **Haptic Feedback:** Tactile "clicks" and physical confirmation for key interactions (toggles, archiving, adding items) for a premium, responsive feel.
 -   **Intelligent Analytics:** Real-time activity dashboard showing goal and task completion rates via modular overview tiles.
--   **Goal Management:** Create, **edit**, and track goals with detailed descriptions, custom categories, and **Priority** status.
--   **Milestones (Sub-tasks):** Break down large goals into smaller, actionable milestones with automated progress tracking and **manual reordering**.
+-   **Goal Management:** Create, **edit**, and track goals with detailed descriptions, custom categories, and **Priority** status (marked with a ⭐).
+-   **Milestones (Sub-tasks):** Break down large goals into smaller, actionable milestones with automated progress tracking and **manual reordering** (Up/Down controls).
 -   **Advanced Sorting:** Organize your dashboard by **Deadline**, **Progress**, **Creation Date**, **Name**, or **Priority**.
--   **Custom Theme Control:** Switch between Light, Dark, or System mode independently of system settings.
--   **Goal Archives:** Keep your dashboard focused by archiving completed goals. A dedicated view lets you manage your history.
+-   **Custom Theme Control:** Switch between Light, Dark, or System mode independently of device-wide settings via the "More" menu.
+-   **Goal Archives:** Keep your dashboard focused by archiving completed goals. A dedicated view lets you manage and unarchive your history.
 -   **Search & Filtering:** Dynamic, iOS-style search bar and interactive category tags for instant goal discovery.
 -   **Smart Reminders:** Schedule local notifications using `WorkManager` to stay on top of your deadlines.
--   **Data Export:** Share a comprehensive text summary of your goals and progress with other apps.
+-   **Visual Deadlines:** Integrated Material 3 DatePicker with **overdue highlighting** (Red alert for past-due tasks).
+-   **Data Export:** Share a comprehensive, beautifully formatted text summary of your goals, milestones, and stats with other apps.
 
 ## 🛠 Tech Stack
 
--   **Language:** Kotlin
+-   **Language:** Kotlin 1.9.22
 -   **UI Framework:** Jetpack Compose (Declarative UI)
 -   **Architecture:** MVVM (Model-View-ViewModel)
--   **Dependency Injection:** Hilt (Dagger)
--   **Local Persistence:** Room Database (SQL abstraction)
--   **Background Tasks:** WorkManager (for reminders)
+-   **Dependency Injection:** Hilt 2.50
+-   **Local Persistence:** Room Database 2.6.1 (SQL abstraction)
+-   **Background Tasks:** WorkManager (for robust reminders)
 -   **Asynchronous Flows:** Kotlin Coroutines & StateFlow
+-   **Build System:** Gradle 9.5.0 with KSP (Kotlin Symbol Processing)
 
 ## 📂 Project Structure
 
@@ -35,11 +37,11 @@ SelfGoals/
 │   │   ├── java/com/example/selfgoals/
 │   │   │   ├── data/           # Entities (Goal, Category, Milestone), DAOs, and Repositories
 │   │   │   ├── di/             # Hilt Dependency Injection modules
-│   │   │   ├── ui/             # Compose Screens, ViewModels (Dashboard, Progress), and Themes
-│   │   │   ├── worker/         # WorkManager background workers for reminders
-│   │   │   └── utils/          # Helpers (Notifications, Haptics)
-│   │   └── AndroidManifest.xml # App configuration
-└── build.gradle.kts            # Project dependencies
+│   │   │   ├── ui/             # Compose Screens (Dashboard), ViewModels, and Themes
+│   │   │   ├── worker/         # WorkManager background workers for notifications
+│   │   │   └── utils/          # Helpers (Notifications, formatting)
+│   │   └── AndroidManifest.xml # App manifest and configuration
+└── build.gradle.kts            # Root project dependencies and configuration
 ```
 
 ## 🚀 Getting Started
@@ -47,6 +49,7 @@ SelfGoals/
 1.  Clone the repository.
 2.  Open the project in **Android Studio Hedgehog** or newer.
 3.  Sync Gradle and run on an emulator or physical device (API 24+).
+4.  **Haptics Note:** For the best experience, run on a physical device with a haptic engine enabled.
 
 ---
-*SelfGoals is built with care using modern Android standards.*
+*SelfGoals is built with care using modern Android standards and a focus on UX.*
