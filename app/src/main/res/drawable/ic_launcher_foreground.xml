@@ -1,0 +1,33 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- Ascending Steps / Milestones (Representing the path to utility) -->
+    <!-- Step 1 -->
+    <path
+        android:fillColor="#80FFFFFF"
+        android:pathData="M30,70 L45,70 L45,65 L30,65 Z" />
+    <!-- Step 2 -->
+    <path
+        android:fillColor="#B3FFFFFF"
+        android:pathData="M45,65 L60,65 L60,55 L45,55 Z" />
+    <!-- Step 3 -->
+    <path
+        android:fillColor="#E6FFFFFF"
+        android:pathData="M60,55 L75,55 L75,40 L60,40 Z" />
+        
+    <!-- The Goal / Achievement Star (Philosophy of excellence) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M75,30 L77.4,37 L84.8,37 L78.8,41.5 L81.1,48.5 L75,44 L68.9,48.5 L71.2,41.5 L65.2,37 L72.6,37 Z" />
+        
+    <!-- Connective Growth Path (Fluid curve) -->
+    <path
+        android:strokeWidth="3"
+        android:strokeColor="#FFFFFF"
+        android:pathData="M25,75 Q45,75 54,54 T75,30"
+        android:strokeLineCap="round" />
+        
+</vector>

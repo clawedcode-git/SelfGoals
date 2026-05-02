@@ -4,9 +4,9 @@
     <application
         android:name=".SelfGoalsApp"
         android:allowBackup="true"
-        android:icon="@android:drawable/btn_star"
+        android:icon="@mipmap/ic_launcher"
         android:label="SelfGoals"
-        android:roundIcon="@android:drawable/btn_star"
+        android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@android:style/Theme.Material.Light.NoActionBar">
         

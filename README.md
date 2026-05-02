@@ -5,6 +5,7 @@ A high-polish, local-first Android application designed to help you define, trac
 ## ✨ Features
 
 -   **iOS 18 Design Language:** Modular "widget" layouts, glassmorphism, bold typography, and fluid squircle shapes.
+-   **Custom Adaptive Icon:** A unique brand identity featuring a growth-oriented design with a vibrant blue-to-purple gradient.
 -   **Haptic Feedback:** Tactile "clicks" and physical confirmation for key interactions (toggles, archiving, adding items) for a premium, responsive feel.
 -   **Intelligent Analytics:** Real-time activity dashboard showing goal and task completion rates via modular overview tiles.
 -   **Goal Management:** Create, **edit**, and track goals with detailed descriptions, custom categories, and **Priority** status (marked with a ⭐).
@@ -58,6 +59,7 @@ SelfGoals/
 
 ## ✅ Project Status: v1.1 Refined
 - **Persistence:** Integrated Jetpack DataStore for user preferences.
+- **Brand Identity:** Custom-designed adaptive icon reflecting the philosophy of growth and achievement.
 - **Robust Testing:** Full suite of Unit and UI tests implemented. Verified successfully on AVD (`SelfGoalsTest`).
 - **Visual Verification:** High-resolution screenshots confirmed consistent UI across boot and post-test states.
 - **Localization Ready:** 100% of UI strings moved to resource files.
