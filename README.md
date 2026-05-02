@@ -2,6 +2,8 @@
 
 A high-polish, local-first Android application designed to help you define, track, and achieve your life goals. Built with a modern **iOS 18-inspired aesthetic**, SelfGoals combines powerful functionality with a fluid, tactile user experience.
 
+**🌐 [Visit the Live Landing Page](https://clawedcode-git.github.io/SelfGoals/)**
+
 ## ✨ Features
 
 -   **iOS 18 Design Language:** Modular "widget" layouts, glassmorphism, bold typography, and fluid squircle shapes.
