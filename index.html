@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SelfGoals - Achieve Your Life Goals</title>
+    <style>
+        :root {
+            --primary: #007AFF;
+            --secondary: #5856D6;
+            --bg: #F2F2F7;
+            --card: #FFFFFF;
+            --text: #1C1C1E;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            background: var(--card);
+            padding: 40px;
+            border-radius: 28px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        p {
+            font-size: 1.2rem;
+            color: #636366;
+            line-height: 1.5;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 35px;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 14px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        .features {
+            margin-top: 40px;
+            text-align: left;
+        }
+        .feature-item {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .feature-icon {
+            margin-right: 15px;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>SelfGoals 🎯</h1>
+        <p>A high-polish, local-first Android application designed to help you define, track, and achieve your life goals.</p>
+        
+        <div class="features">
+            <div class="feature-item"><span class="feature-icon">✨</span> iOS 18-inspired glassmorphism & fluid squircle shapes.</div>
+            <div class="feature-item"><span class="feature-icon">📊</span> Intelligent real-time analytics & activity dashboard.</div>
+            <div class="feature-item"><span class="feature-icon">⭐</span> Priority tracking, milestones, and advanced sorting.</div>
+            <div class="feature-item"><span class="feature-icon">🌓</span> Persistent Light/Dark mode with DataStore.</div>
+        </div>
+
+        <a href="https://github.com/clawedcode-git/SelfGoals/releases/latest" class="btn">Download Latest APK</a>
+        
+        <p style="margin-top: 40px; font-size: 0.9rem;">
+            Built with Jetpack Compose, Room, Hilt, and WorkManager.
+        </p>
+    </div>
+</body>
+</html>
