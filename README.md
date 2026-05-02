@@ -16,8 +16,14 @@ A high-polish, local-first Android application designed to help you define, trac
 -   **Search & Filtering:** Dynamic, iOS-style search bar and interactive category tags for instant goal discovery.
 -   **Smart Reminders:** Schedule local notifications using `WorkManager` to stay on top of your deadlines.
 -   **Localization Ready:** All UI strings are externalized to `res/values/strings.xml`, ready for translation.
--   **Visual Deadlines:** Integrated Material 3 DatePicker with **overdue highlighting** (Red alert for past-due tasks).
--   **Data Export:** Share a comprehensive, beautifully formatted text summary of your goals, milestones, and stats with other apps.
+- **Visual Deadlines:** Integrated Material 3 DatePicker with **overdue highlighting** (Red alert for past-due tasks).
+- **Data Export:** Share a comprehensive, beautifully formatted text summary of your goals, milestones, and stats with other apps.
+
+## 📱 Visuals
+
+| Dashboard | Goal Details |
+| :---: | :---: |
+| <img src="screenshot_dashboard.png" width="300"> | <img src="final_view.png" width="300"> |
 
 ## 🛠 Tech Stack
 
