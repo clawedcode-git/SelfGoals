@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.selfgoals.app-mergeDebugResources-60:/values-en-rGB/values-en-rGB.xml",
+            "outputFile": "com.example.selfgoals.app-mergeDebugResources-62:/values-en-rGB/values-en-rGB.xml",
             "map": [
                 {
                     "source": "/Users/onyx/.gradle/caches/9.5.0/transforms/a9680c1f4731a2ab86ff12e4897f1d12/transformed/material3-1.1.1/res/values-en-rGB/values-en-rGB.xml",

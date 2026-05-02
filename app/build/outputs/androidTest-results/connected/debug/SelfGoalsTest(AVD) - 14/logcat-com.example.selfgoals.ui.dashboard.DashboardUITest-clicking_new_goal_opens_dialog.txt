@@ -1,0 +1,205 @@
+05-02 08:00:17.922  4476  4498 I TestRunner: started: clicking_new_goal_opens_dialog(com.example.selfgoals.ui.dashboard.DashboardUITest)
+05-02 08:00:17.934  4476  4498 W FileTestStorage: Output properties is not supported.
+05-02 08:00:17.934  4476  4498 I Tracing : Tracer added: class androidx.test.platform.tracing.AndroidXTracer
+05-02 08:00:17.935  4476  4476 D EventInjectionStrategy: Creating injection strategy with input manager.
+05-02 08:00:17.936  4476  4476 W ample.selfgoals: Accessing hidden method Landroid/hardware/input/InputManager;->getInstance()Landroid/hardware/input/InputManager; (unsupported, reflection, allowed)
+05-02 08:00:17.936  4476  4476 W ample.selfgoals: Accessing hidden method Landroid/hardware/input/InputManager;->injectInputEvent(Landroid/view/InputEvent;I)Z (unsupported, reflection, allowed)
+05-02 08:00:17.936  4476  4476 W ample.selfgoals: Accessing hidden field Landroid/hardware/input/InputManager;->INJECT_INPUT_EVENT_MODE_WAIT_FOR_FINISH:I (unsupported, reflection, allowed)
+05-02 08:00:17.938  4476  4476 W ample.selfgoals: Accessing hidden method Landroid/os/MessageQueue;->next()Landroid/os/Message; (unsupported, reflection, allowed)
+05-02 08:00:17.938  4476  4476 W ample.selfgoals: Accessing hidden field Landroid/os/MessageQueue;->mMessages:Landroid/os/Message; (unsupported, reflection, allowed)
+05-02 08:00:17.938  4476  4476 W ample.selfgoals: Accessing hidden method Landroid/os/Message;->recycleUnchecked()V (unsupported, reflection, allowed)
+05-02 08:00:17.938  4476  4498 D IdlingRegistry: Registering idling resources: [androidx.compose.ui.test.junit4.EspressoLink@77ed78b]
+05-02 08:00:17.943  4476  4498 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+05-02 08:00:17.971   388   388 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+05-02 08:00:17.977   751   861 D SplashScreenView: Build android.window.SplashScreenView{2b230aa V.E...... ......ID 0,0-0,0}
+05-02 08:00:17.977   751   861 D SplashScreenView: Icon: view: null drawable: null size: 0
+05-02 08:00:17.977   751   861 D SplashScreenView: Branding: view: android.view.View{e2eb49b G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+05-02 08:00:17.979  4476  4476 D LifecycleMonitor: Lifecycle status change: com.example.selfgoals.MainActivity@5b8b97b in: PRE_ON_CREATE
+05-02 08:00:17.980  4476  4476 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+05-02 08:00:17.986  4476  4502 D libEGL  : loaded /vendor/lib64/egl/libEGL_emulation.so
+05-02 08:00:17.988  4476  4502 D libEGL  : loaded /vendor/lib64/egl/libGLESv1_CM_emulation.so
+05-02 08:00:17.993  4476  4502 D libEGL  : loaded /vendor/lib64/egl/libGLESv2_emulation.so
+05-02 08:00:17.994   751   868 E OpenGLRenderer: Unable to match the desired swap behavior.
+05-02 08:00:17.995  4476  4476 D LifecycleMonitor: Lifecycle status change: com.example.selfgoals.MainActivity@5b8b97b in: CREATED
+05-02 08:00:17.995  4476  4476 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=com.example.selfgoals.MainActivity@5b8b97b
+05-02 08:00:17.995  4476  4476 D LifecycleMonitor: Lifecycle status change: com.example.selfgoals.MainActivity@5b8b97b in: STARTED
+05-02 08:00:17.995  4476  4476 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=com.example.selfgoals.MainActivity@5b8b97b
+05-02 08:00:17.996  4476  4476 D LifecycleMonitor: Lifecycle status change: com.example.selfgoals.MainActivity@5b8b97b in: RESUMED
+05-02 08:00:17.996  4476  4476 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=com.example.selfgoals.MainActivity@5b8b97b
+05-02 08:00:17.998  4476  4476 D CompatibilityChangeReporter: Compat change id reported: 237531167; UID 10192; state: DISABLED
+05-02 08:00:17.999  4476  4476 W OpenGLRenderer: Unknown dataspace 0
+05-02 08:00:18.014   983  1648 D EGL_emulation: app_time_stats: avg=44.44ms min=0.67ms max=908.16ms count=22
+05-02 08:00:18.029  4476  4476 W ample.selfgoals: Method java.lang.Object androidx.compose.runtime.snapshots.SnapshotStateMap.mutate(kotlin.jvm.functions.Function1) failed lock verification and will run slower.
+05-02 08:00:18.029  4476  4476 W ample.selfgoals: Common causes for lock verification issues are non-optimized dex code
+05-02 08:00:18.029  4476  4476 W ample.selfgoals: and incorrect proguard optimizations.
+05-02 08:00:18.029  4476  4476 W ample.selfgoals: Method void androidx.compose.runtime.snapshots.SnapshotStateMap.update(kotlin.jvm.functions.Function1) failed lock verification and will run slower.
+05-02 08:00:18.029  4476  4476 W ample.selfgoals: Method boolean androidx.compose.runtime.snapshots.SnapshotStateMap.removeIf$runtime_release(kotlin.jvm.functions.Function1) failed lock verification and will run slower.
+05-02 08:00:18.041   751   868 D EGL_emulation: app_time_stats: avg=18000.04ms min=18000.04ms max=18000.04ms count=1
+05-02 08:00:18.081   388   629 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10192 pid=0
+05-02 08:00:18.081   388   629 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10192 => denied (305 us)
+05-02 08:00:18.082   388   629 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10192 pid=0
+05-02 08:00:18.082   388   629 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10192 => denied (205 us)
+05-02 08:00:18.082   388   628 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10192 pid=4476
+05-02 08:00:18.082   388   628 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10192 => denied (340 us)
+05-02 08:00:18.082   388   628 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10192 pid=4476
+05-02 08:00:18.082   388   629 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10192 pid=0
+05-02 08:00:18.082   388   629 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10192 => denied (239 us)
+05-02 08:00:18.082   388   628 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10192 => denied (368 us)
+05-02 08:00:18.087  4476  4501 W OpenGLRenderer: Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
+05-02 08:00:18.090  4476  4501 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+05-02 08:00:18.096   161   161 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+05-02 08:00:18.096  4476  4501 I Gralloc4: mapper 4.x is not supported
+05-02 08:00:18.100  4476  4501 E OpenGLRenderer: Unable to match the desired swap behavior.
+05-02 08:00:18.145  4476  4476 W ample.selfgoals: Method boolean androidx.compose.runtime.snapshots.SnapshotStateList.conditionalUpdate(kotlin.jvm.functions.Function1) failed lock verification and will run slower.
+05-02 08:00:18.146  4476  4476 W ample.selfgoals: Method java.lang.Object androidx.compose.runtime.snapshots.SnapshotStateList.mutate(kotlin.jvm.functions.Function1) failed lock verification and will run slower.
+05-02 08:00:18.146  4476  4476 W ample.selfgoals: Method void androidx.compose.runtime.snapshots.SnapshotStateList.update(kotlin.jvm.functions.Function1) failed lock verification and will run slower.
+05-02 08:00:18.157  4476  4476 D CompatibilityChangeReporter: Compat change id reported: 289878283; UID 10192; state: ENABLED
+05-02 08:00:18.210   539  2254 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10192 pid=0
+05-02 08:00:18.210   539  2254 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10192 => denied (84 us)
+05-02 08:00:18.210   539  2254 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10192 pid=0
+05-02 08:00:18.210   539  2254 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10192 => denied (12 us)
+05-02 08:00:18.210   539  2254 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10192 pid=0
+05-02 08:00:18.210   539  2254 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10192 => denied (5 us)
+05-02 08:00:18.212   539   556 W ziparchive: Unable to open '/data/app/~~IVP7s4zujoY4MxlXxibO0A==/com.example.selfgoals-izvPVOE4_RHSekcvnoqqrw==/base.dm': No such file or directory
+05-02 08:00:18.214   539   556 I ActivityTaskManager: Displayed com.example.selfgoals/.MainActivity for user 0: +266ms
+05-02 08:00:18.226   539  2254 I ImeTracker: com.example.selfgoals:8c9d2299: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+05-02 08:00:18.226   539  2254 I ImeTracker: com.example.selfgoals:8c9d2299: onCancelled at PHASE_SERVER_SHOULD_HIDE
+05-02 08:00:18.235  1389  1389 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+05-02 08:00:18.242  1389  1389 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+05-02 08:00:18.242  1389  1389 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.example.selfgoals fieldId=0 fieldName=null extras=null}, false)
+05-02 08:00:18.242  1389  1389 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+05-02 08:00:18.242  1389  1389 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+05-02 08:00:18.281  1296  2805 E NetworkScheduler.ATC: Error finding compatible intent-filter to handle SERVICE_ACTION_EXECUTE_TASK for com.google.android.gms/.chimera.GmsInternalBoundBrokerService [CONTEXT service_id=218 ]
+05-02 08:00:18.281  1296  2805 E NetworkScheduler.TED: Invalid service definition provided: null [CONTEXT service_id=218 ]
+05-02 08:00:18.282  1296  3196 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.chimera.GmsInternalBoundBrokerService finished executing. cause:4 result: 10 elapsed_millis: 2 uptime_millis: 2 exec_start_elapsed_seconds: 37 [CONTEXT service_id=218 ]
+05-02 08:00:18.308   751   868 D EGL_emulation: app_time_stats: avg=12073.53ms min=341.37ms max=23805.69ms count=2
+05-02 08:00:18.325   931  1224 D BtGatt.ScanManager: uid 10128 isForeground true scanMode 1
+05-02 08:00:18.325   931  1224 D BtGatt.ScanManager: uid 10128 isForeground true scanMode -1
+05-02 08:00:18.347   983  1088 I ImeTracker: com.google.android.apps.nexuslauncher:c731ea19: onRequestHide at ORIGIN_CLIENT_HIDE_SOFT_INPUT reason HIDE_SOFT_INPUT
+05-02 08:00:18.347   983  1088 I ImeTracker: com.google.android.apps.nexuslauncher:c731ea19: onFailed at PHASE_CLIENT_VIEW_SERVED
+05-02 08:00:18.348   983  1894 D OneSearchSuggestProvider: Shut down the binder channel
+05-02 08:00:18.350   983  1619 I IPCThreadState: oneway function results for code 2 on binder at 0xb400007721c6cc20 will be dropped but finished with status UNKNOWN_TRANSACTION
+05-02 08:00:18.401  1296  1296 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.tapandpay.service.BIND dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiService }
+05-02 08:00:18.403  1674  1674 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.pay.service.BIND dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsApiService }
+05-02 08:00:18.408  4476  4476 W WindowOnBackDispatcher: OnBackInvokedCallback is not enabled for the application.
+05-02 08:00:18.408  4476  4476 W WindowOnBackDispatcher: Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+05-02 08:00:18.480   734   734 I wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS
+05-02 08:00:18.490   751   860 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@a5aad76
+05-02 08:00:18.490   539  1856 W InputManager-JNI: Input channel object '625e807 Splash Screen com.example.selfgoals (client)' was disposed without first being removed with the input manager!
+05-02 08:00:18.491  4476  4476 D CompatibilityChangeReporter: Compat change id reported: 171228096; UID 10192; state: ENABLED
+05-02 08:00:18.530  4476  4501 E OpenGLRenderer: Unable to match the desired swap behavior.
+05-02 08:00:18.552   931  1224 D BtGatt.ScanManager: uid 10128 isForeground true scanMode 1
+05-02 08:00:18.552   931  1224 D BtGatt.ScanManager: uid 10128 isForeground true scanMode -1
+05-02 08:00:18.554  1296  2755 I FontLog : Received query Noto Color Emoji Compat, URI content://com.google.android.gms.fonts [CONTEXT service_id=132 ]
+05-02 08:00:18.554  1296  2755 I FontLog : Query [emojicompat-emoji-font] resolved to {Noto Color Emoji Compat, wdth 100.0, wght 400, ital 0.0, bestEffort false} [CONTEXT service_id=132 ]
+05-02 08:00:18.559  1296  2755 I FontLog : Fetch {Noto Color Emoji Compat, wdth 100.0, wght 400, ital 0.0, bestEffort false} end status Status{statusCode=SUCCESS, resolution=null} [CONTEXT service_id=132 ]
+05-02 08:00:18.561  1296  2755 I FontLog : Pulling font file for id = 13, cache size = 13 [CONTEXT service_id=132 ]
+05-02 08:00:18.565  1296  2755 I FontLog : Pulling font file for id = 13, cache size = 13 [CONTEXT service_id=132 ]
+05-02 08:00:18.591   539  1468 I ImeTracker: com.example.selfgoals:8f2b1b08: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+05-02 08:00:18.591   539  1468 I ImeTracker: com.example.selfgoals:8f2b1b08: onCancelled at PHASE_SERVER_SHOULD_HIDE
+05-02 08:00:18.591  1389  1389 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+05-02 08:00:18.592  1389  1389 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+05-02 08:00:18.592  1389  1389 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.example.selfgoals fieldId=0 fieldName=null extras=null}, false)
+05-02 08:00:18.592  1389  1389 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+05-02 08:00:18.592  1389  1389 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+05-02 08:00:18.747   751   861 D SplashScreenView: Build android.window.SplashScreenView{8fb6c0 V.E...... ......ID 0,0-0,0}
+05-02 08:00:18.747   751   861 D SplashScreenView: Icon: view: null drawable: null size: 0
+05-02 08:00:18.747   751   861 D SplashScreenView: Branding: view: android.view.View{f5f7ff9 G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+05-02 08:00:18.748  4476  4476 D LifecycleMonitor: Lifecycle status change: com.example.selfgoals.MainActivity@5b8b97b in: PAUSED
+05-02 08:00:18.748  4476  4476 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=com.example.selfgoals.MainActivity@5b8b97b
+05-02 08:00:18.754   352   352 D Zygote  : Forked child process 4520
+05-02 08:00:18.754   388   388 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+05-02 08:00:18.761   751   868 E OpenGLRenderer: Unable to match the desired swap behavior.
+05-02 08:00:18.789   376   376 I android.hardware.power-service.example: Power isModeSupported: 6
+05-02 08:00:18.794  4520  4520 I .selfgoals.test: Late-enabling -Xcheck:jni
+05-02 08:00:18.801  4520  4520 I .selfgoals.test: Using CollectorTypeCC GC.
+05-02 08:00:18.806   429   441 I adbd    : jdwp connection from 4520
+05-02 08:00:18.845  4520  4520 D CompatibilityChangeReporter: Compat change id reported: 171979766; UID 10193; state: ENABLED
+05-02 08:00:18.845  4520  4520 D CompatibilityChangeReporter: Compat change id reported: 242716250; UID 10193; state: ENABLED
+05-02 08:00:18.849  4520  4520 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+05-02 08:00:18.850  4520  4520 D nativeloader: Configuring clns-6 for other apk /system/framework/android.test.mock.jar. target_sdk_version=34, uses_libraries=ALL, library_path=/data/app/~~FZLi4c1Diw5572cNYOwamw==/com.example.selfgoals.test-QHSJBUIiIWhMDtc3946jRw==/lib/arm64, permitted_path=/data:/mnt/expand:/data/user/0/com.example.selfgoals.test
+05-02 08:00:18.850  4520  4520 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+05-02 08:00:18.855  4520  4520 D nativeloader: Configuring clns-7 for other apk /system/framework/android.test.runner.jar. target_sdk_version=34, uses_libraries=ALL, library_path=/data/app/~~FZLi4c1Diw5572cNYOwamw==/com.example.selfgoals.test-QHSJBUIiIWhMDtc3946jRw==/lib/arm64, permitted_path=/data:/mnt/expand:/data/user/0/com.example.selfgoals.test
+05-02 08:00:18.855  4520  4520 W ziparchive: Unable to open '/data/app/~~FZLi4c1Diw5572cNYOwamw==/com.example.selfgoals.test-QHSJBUIiIWhMDtc3946jRw==/base.dm': No such file or directory
+05-02 08:00:18.855  4520  4520 W ziparchive: Unable to open '/data/app/~~FZLi4c1Diw5572cNYOwamw==/com.example.selfgoals.test-QHSJBUIiIWhMDtc3946jRw==/base.dm': No such file or directory
+05-02 08:00:18.869  4520  4520 D nativeloader: Configuring clns-8 for other apk /data/app/~~FZLi4c1Diw5572cNYOwamw==/com.example.selfgoals.test-QHSJBUIiIWhMDtc3946jRw==/base.apk. target_sdk_version=34, uses_libraries=, library_path=/data/app/~~FZLi4c1Diw5572cNYOwamw==/com.example.selfgoals.test-QHSJBUIiIWhMDtc3946jRw==/lib/arm64, permitted_path=/data:/mnt/expand:/data/user/0/com.example.selfgoals.test
+05-02 08:00:18.874  4520  4520 V GraphicsEnvironment: Currently set values for:
+05-02 08:00:18.874  4520  4520 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+05-02 08:00:18.874  4520  4520 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+05-02 08:00:18.874  4520  4520 V GraphicsEnvironment: ANGLE GameManagerService for com.example.selfgoals.test: false
+05-02 08:00:18.875  4520  4520 V GraphicsEnvironment: com.example.selfgoals.test is not listed in per-application setting
+05-02 08:00:18.875  4520  4520 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+05-02 08:00:18.881  4520  4541 D libEGL  : loaded /vendor/lib64/egl/libEGL_emulation.so
+05-02 08:00:18.882  4520  4541 D libEGL  : loaded /vendor/lib64/egl/libGLESv1_CM_emulation.so
+05-02 08:00:18.883  4520  4541 D libEGL  : loaded /vendor/lib64/egl/libGLESv2_emulation.so
+05-02 08:00:18.893   931  1224 D BtGatt.ScanManager: uid 10128 isForeground true scanMode 1
+05-02 08:00:18.893   931  1224 D BtGatt.ScanManager: uid 10128 isForeground true scanMode -1
+05-02 08:00:18.894  4520  4520 D CompatibilityChangeReporter: Compat change id reported: 237531167; UID 10193; state: DISABLED
+05-02 08:00:18.895  4520  4520 W OpenGLRenderer: Unknown dataspace 0
+05-02 08:00:18.908   388   444 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10193 pid=0
+05-02 08:00:18.908   388   628 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10193 pid=4520
+05-02 08:00:18.908   388   444 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10193 => denied (303 us)
+05-02 08:00:18.908   388   628 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10193 => denied (28 us)
+05-02 08:00:18.909   388   628 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10193 pid=4520
+05-02 08:00:18.909   388   628 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10193 => denied (534 us)
+05-02 08:00:18.909   388   628 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10193 pid=4520
+05-02 08:00:18.909   388   628 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10193 => denied (47 us)
+05-02 08:00:18.909   388   444 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10193 pid=0
+05-02 08:00:18.909   388   444 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10193 => denied (845 us)
+05-02 08:00:18.912  4520  4539 W OpenGLRenderer: Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
+05-02 08:00:18.912  4520  4539 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+05-02 08:00:18.916   161   161 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+05-02 08:00:18.916  4520  4539 I Gralloc4: mapper 4.x is not supported
+05-02 08:00:18.919  4520  4539 E OpenGLRenderer: Unable to match the desired swap behavior.
+05-02 08:00:18.928   539  1856 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10193 pid=0
+05-02 08:00:18.928   539  1856 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10193 => denied (56 us)
+05-02 08:00:18.928   539  1856 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10193 pid=0
+05-02 08:00:18.928   539  1856 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10193 => denied (6 us)
+05-02 08:00:18.928   539  1856 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10193 pid=0
+05-02 08:00:18.928   539  1856 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10193 => denied (4 us)
+05-02 08:00:18.937   931  1224 D BtGatt.ScanManager: uid 10128 isForeground true scanMode 1
+05-02 08:00:18.937   931  1224 D BtGatt.ScanManager: uid 10128 isForeground true scanMode -1
+05-02 08:00:18.939  1472  1730 I AiAiEcho: Predicting[0]:
+05-02 08:00:18.939  1472  1730 I AiAiEcho: EchoTargets:
+05-02 08:00:18.939  1472  1730 I AiAiEcho: Filtered by AiAi flag check:
+05-02 08:00:18.939  1472  1730 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:
+05-02 08:00:18.944   539  1510 W AppSearchIcing: icing-search-engine.cc:283: Error: 5, Message: Document (com.google.android.googlequicksearchbox$OneSearchZeroStateGoogleSuggestions/default, zp) not found.
+05-02 08:00:18.945  1472  1730 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+05-02 08:00:18.946   983  1648 E OpenGLRenderer: Unable to match the desired swap behavior.
+05-02 08:00:18.946  1586  2306 E OpenGLRenderer: Unable to match the desired swap behavior.
+05-02 08:00:18.950   983  1894 D OneSearchSuggestProvider: Created the binder channel successfully for end point service =com.google.android.apps.search.googleapp.search.suggest.plugins.onesearch.server.OneSearchSuggestService , mChannel=z1{delegate=s1{logId=9, target=directaddress:///AndroidComponentAddress%5BIntent%20%7B%20act=grpc.io.action.BIND%20cmp=com.google.android.googlequicksearchbox/com.google.android.apps.search.googleapp.search.suggest.plugins.onesearch.server.OneSearchSuggestService%20%7D%5D}} , mOneSearchConnection=X1.T@3109777
+05-02 08:00:18.975  4476  4476 D LifecycleMonitor: Lifecycle status change: com.example.selfgoals.MainActivity@5b8b97b in: STOPPED
+05-02 08:00:18.975  4476  4476 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=com.example.selfgoals.MainActivity@5b8b97b
+05-02 08:00:18.976   539  1468 I ImeTracker: com.google.android.apps.nexuslauncher:e126fc50: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+05-02 08:00:18.976   539  1468 I ImeTracker: com.google.android.apps.nexuslauncher:e126fc50: onCancelled at PHASE_SERVER_SHOULD_HIDE
+05-02 08:00:18.977  1389  1389 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+05-02 08:00:18.978  1389  1389 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+05-02 08:00:18.978  1389  1389 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.google.android.apps.nexuslauncher fieldId=0 fieldName=null extras=null}, false)
+05-02 08:00:18.978  1389  1389 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+05-02 08:00:18.978  1389  1389 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+05-02 08:00:18.994  1586  1586 I A       : (REDACTED) Created gRPC endpoint for service %s
+05-02 08:00:19.000  4476  4476 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@d353de9
+05-02 08:00:19.002   539  1856 W InputManager-JNI: Input channel object 'c5ff4a9 com.example.selfgoals/com.example.selfgoals.MainActivity (client)' was disposed without first being removed with the input manager!
+05-02 08:00:19.021  4476  4476 D LifecycleMonitor: Lifecycle status change: com.example.selfgoals.MainActivity@5b8b97b in: DESTROYED
+05-02 08:00:19.022  4476  4476 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+05-02 08:00:19.027  4476  4498 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.junit4.EspressoLink@77ed78b]
+05-02 08:00:19.028   983   983 D SearchTargetUtil:  query= size=15
+05-02 08:00:19.028   983   983 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=indian rupee record low,group_id=web13128,response_id=82eaea84-93de-485d-9c6c-34d145a2a3d2,support_query_builder=false,} searchAction=indian rupee record low searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=true,suggestion_action_rpc=2,}ParentID: null targetID: 72989be9-a435-4135-85bb-8c416f319e6c
+05-02 08:00:19.028   983   983 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=the devil wears prada 2 reviews,group_id=web13128,response_id=82eaea84-93de-485d-9c6c-34d145a2a3d2,support_query_builder=false,} searchAction=the devil wears prada 2 reviews searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=true,suggestion_action_rpc=2,}ParentID: null targetID: 855c7eae-51f9-4121-b0b7-688c9a2fca56
+05-02 08:00:19.028   983   983 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=uss gerald ford,group_id=web13128,response_id=82eaea84-93de-485d-9c6c-34d145a2a3d2,support_query_builder=false,} searchAction=uss gerald ford searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=true,suggestion_action_rpc=2,}ParentID: null targetID: 29a88efc-8b53-4283-ada0-6aba3d50bbe5
+05-02 08:00:19.028   983   983 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=yawning,group_id=web13128,response_id=82eaea84-93de-485d-9c6c-34d145a2a3d2,support_query_builder=false,} searchAction=yawning searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=true,suggestion_action_rpc=2,}ParentID: null targetID: 55a1fa33-8228-4365-9168-b32283363933
+05-02 08:00:19.028   983   983 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=nottingham forest vs aston villa stats,group_id=web13128,response_id=82eaea84-93de-485d-9c6c-34d145a2a3d2,support_query_builder=false,} searchAction=nottingham forest vs aston villa stats searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=true,suggestion_action_rpc=2,}ParentID: null targetID: 64445fd9-1612-49ce-84b4-55bff4b6c314
+05-02 08:00:19.028   983   983 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=oneplus pad 4,group_id=web13128,response_id=82eaea84-93de-485d-9c6c-34d145a2a3d2,support_query_builder=false,} searchAction=oneplus pad 4 searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=true,suggestion_action_rpc=2,}ParentID: null targetID: f4e28721-07cb-4115-9586-0c895e7b1dab
+05-02 08:00:19.028  4476  4476 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@30c4eaf
+05-02 08:00:19.028   983   983 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=ap 10th results ap ssc results,group_id=web13128,response_id=82eaea84-93de-485d-9c6c-34d145a2a3d2,support_query_builder=false,} searchAction=ap 10th results ap ssc results searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=true,suggestion_action_rpc=2,}ParentID: null targetID: 6d6d9812-96b9-478d-b5e9-0041a3ff8e4b
+05-02 08:00:19.028   983   983 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=flower moon full moon,group_id=web13128,response_id=82eaea84-93de-485d-9c6c-34d145a2a3d2,support_query_builder=false,} searchAction=flower moon full moon searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=true,suggestion_action_rpc=2,}ParentID: null targetID: aaf9161a-a4e2-4e1f-921b-5a468e4a59d5
+05-02 08:00:19.028   983   983 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=brent crude oil price,group_id=web13128,response_id=82eaea84-93de-485d-9c6c-34d145a2a3d2,support_query_builder=false,} searchAction=brent crude oil price searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=true,suggestion_action_rpc=2,}ParentID: null targetID: 02ae231f-5f0b-4046-870e-1c512750a9b0
+05-02 08:00:19.028   983   983 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=bse sensex,group_id=web13128,response_id=82eaea84-93de-485d-9c6c-34d145a2a3d2,support_query_builder=false,} searchAction=bse sensex searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=true,suggestion_action_rpc=2,}ParentID: null targetID: 8d8cac8c-c2cc-48fb-91b3-d9a1f8ab0333
+05-02 08:00:19.028   983   983 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=motorola moto g37,group_id=web13128,response_id=82eaea84-93de-485d-9c6c-34d145a2a3d2,support_query_builder=false,} searchAction=motorola moto g37 searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=true,suggestion_action_rpc=2,}ParentID: null targetID: 197243d0-34d6-400e-b06e-02d84c5f0e0f
+05-02 08:00:19.028   983   983 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=gujarat titans vs rcb,group_id=web13128,response_id=82eaea84-93de-485d-9c6c-34d145a2a3d2,support_query_builder=false,} searchAction=gujarat titans vs rcb searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=true,suggestion_action_rpc=2,}ParentID: null targetID: 4aa2ba55-71a8-4aae-9b70-5c94aa9f133f
+05-02 08:00:19.028   983   983 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=bank of maharashtra lease irregularities,group_id=web13128,response_id=82eaea84-93de-485d-9c6c-34d145a2a3d2,support_query_builder=false,} searchAction=bank of maharashtra lease irregularities searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=true,suggestion_action_rpc=2,}ParentID: null targetID: 7b51f361-db99-4adc-aa2c-a782e17780e7
+05-02 08:00:19.028   983   983 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=new ott releases movies,group_id=web13128,response_id=82eaea84-93de-485d-9c6c-34d145a2a3d2,support_query_builder=false,} searchAction=new ott releases movies searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=true,suggestion_action_rpc=2,}ParentID: null targetID: 5bb6af12-2eb0-48ed-bb26-247aeefb9ad5
+05-02 08:00:19.028   983   983 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=women ipl,group_id=web13128,response_id=82eaea84-93de-485d-9c6c-34d145a2a3d2,support_query_builder=false,} searchAction=women ipl searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=true,suggestion_action_rpc=2,}ParentID: null targetID: a71dac64-752b-4b7d-ad37-188f818a9648
+05-02 08:00:19.029  4476  4501 D OpenGLRenderer: endAllActiveAnimators on 0xb4000077a1c3d8d0 (UnprojectedRipple) with handle 0xb400007721c4ee60
+05-02 08:00:19.029   539  1856 W InputManager-JNI: Input channel object '2dcf1cd com.example.selfgoals/com.example.selfgoals.MainActivity (client)' was disposed without first being removed with the input manager!
+05-02 08:00:19.031  4476  4498 I TestRunner: finished: clicking_new_goal_opens_dialog(com.example.selfgoals.ui.dashboard.DashboardUITest)

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.selfgoals.app-mergeDebugResources-60:/values-zh-rCN/values-zh-rCN.xml",
+            "outputFile": "com.example.selfgoals.app-mergeDebugResources-62:/values-zh-rCN/values-zh-rCN.xml",
             "map": [
                 {
                     "source": "/Users/onyx/.gradle/caches/9.5.0/transforms/5c9db74245c8dbb2d1133b022645abab/transformed/core-1.12.0/res/values-zh-rCN/values-zh-rCN.xml",

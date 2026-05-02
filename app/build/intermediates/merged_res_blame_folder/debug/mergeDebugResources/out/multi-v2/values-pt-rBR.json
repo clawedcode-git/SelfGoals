@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.selfgoals.app-mergeDebugResources-60:/values-pt-rBR/values-pt-rBR.xml",
+            "outputFile": "com.example.selfgoals.app-mergeDebugResources-62:/values-pt-rBR/values-pt-rBR.xml",
             "map": [
                 {
                     "source": "/Users/onyx/.gradle/caches/9.5.0/transforms/77cd9d290d78e7a57f701f485312cedc/transformed/ui-release/res/values-pt-rBR/values-pt-rBR.xml",

@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/onyx/.gradle/daemon/9.5.0/com.example.selfgoals.app-debug-64:/drawable_ic_launcher_background.xml.flat",
+        "source": "/Users/onyx/.gradle/daemon/9.5.0/com.example.selfgoals.app-main-66:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.selfgoals.app-debug-64:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.selfgoals.app-main-66:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/Users/onyx/.gradle/daemon/9.5.0/com.example.selfgoals.app-debug-64:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "/Users/onyx/.gradle/daemon/9.5.0/com.example.selfgoals.app-main-66:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/Users/onyx/.gradle/daemon/9.5.0/com.example.selfgoals.app-debug-64:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/onyx/.gradle/daemon/9.5.0/com.example.selfgoals.app-main-66:/mipmap-anydpi-v26/ic_launcher.xml"
+    }
+]

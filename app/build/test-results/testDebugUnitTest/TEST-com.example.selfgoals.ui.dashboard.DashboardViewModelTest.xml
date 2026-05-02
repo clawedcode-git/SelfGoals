@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.selfgoals.ui.dashboard.DashboardViewModelTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-05-01T17:41:38.286Z" hostname="Onyx-MBPM5P.local" time="0.644">
+  <properties/>
+  <testcase name="goals flow filters by search query" classname="com.example.selfgoals.ui.dashboard.DashboardViewModelTest" time="0.615"/>
+  <testcase name="toggle goal completion calls repository" classname="com.example.selfgoals.ui.dashboard.DashboardViewModelTest" time="0.019"/>
+  <testcase name="stats calculation is correct" classname="com.example.selfgoals.ui.dashboard.DashboardViewModelTest" time="0.007"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

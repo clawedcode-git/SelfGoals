@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.example.selfgoals.test.app-mergeDebugAndroidTestResources-34:/values-v16/values-v16.xml",
+            "map": [
+                {
+                    "source": "/Users/onyx/.gradle/caches/9.5.0/transforms/5c9db74245c8dbb2d1133b022645abab/transformed/core-1.12.0/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                }
+            ]
+        }
+    ]
+}

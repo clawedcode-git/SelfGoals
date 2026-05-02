@@ -6,15 +6,18 @@ import android.view.View;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.SavedStateHandle;
 import androidx.lifecycle.ViewModel;
+import androidx.work.WorkManager;
 import com.example.selfgoals.data.SelfGoalsDatabase;
 import com.example.selfgoals.data.dao.CategoryDao;
 import com.example.selfgoals.data.dao.GoalDao;
 import com.example.selfgoals.data.dao.MilestoneDao;
 import com.example.selfgoals.data.repository.GoalRepository;
+import com.example.selfgoals.data.repository.SettingsRepository;
 import com.example.selfgoals.di.DatabaseModule_ProvideCategoryDaoFactory;
 import com.example.selfgoals.di.DatabaseModule_ProvideDatabaseFactory;
 import com.example.selfgoals.di.DatabaseModule_ProvideGoalDaoFactory;
 import com.example.selfgoals.di.DatabaseModule_ProvideMilestoneDaoFactory;
+import com.example.selfgoals.di.DatabaseModule_ProvideWorkManagerFactory;
 import com.example.selfgoals.ui.dashboard.DashboardViewModel;
 import com.example.selfgoals.ui.dashboard.DashboardViewModel_HiltModules_KeyModule_ProvideFactory;
 import dagger.hilt.android.ActivityRetainedLifecycle;
@@ -449,7 +452,7 @@ public final class DaggerSelfGoalsApp_HiltComponents_SingletonC {
       public T get() {
         switch (id) {
           case 0: // com.example.selfgoals.ui.dashboard.DashboardViewModel 
-          return (T) new DashboardViewModel(ApplicationContextModule_ProvideApplicationFactory.provideApplication(singletonCImpl.applicationContextModule), singletonCImpl.goalRepositoryProvider.get());
+          return (T) new DashboardViewModel(ApplicationContextModule_ProvideApplicationFactory.provideApplication(singletonCImpl.applicationContextModule), singletonCImpl.goalRepositoryProvider.get(), singletonCImpl.settingsRepositoryProvider.get(), singletonCImpl.provideWorkManagerProvider.get());
 
           default: throw new AssertionError(id);
         }
@@ -535,6 +538,10 @@ public final class DaggerSelfGoalsApp_HiltComponents_SingletonC {
 
     private Provider<GoalRepository> goalRepositoryProvider;
 
+    private Provider<SettingsRepository> settingsRepositoryProvider;
+
+    private Provider<WorkManager> provideWorkManagerProvider;
+
     private SingletonCImpl(ApplicationContextModule applicationContextModuleParam) {
       this.applicationContextModule = applicationContextModuleParam;
       initialize(applicationContextModuleParam);
@@ -557,6 +564,8 @@ public final class DaggerSelfGoalsApp_HiltComponents_SingletonC {
     private void initialize(final ApplicationContextModule applicationContextModuleParam) {
       this.provideDatabaseProvider = DoubleCheck.provider(new SwitchingProvider<SelfGoalsDatabase>(singletonCImpl, 1));
       this.goalRepositoryProvider = DoubleCheck.provider(new SwitchingProvider<GoalRepository>(singletonCImpl, 0));
+      this.settingsRepositoryProvider = DoubleCheck.provider(new SwitchingProvider<SettingsRepository>(singletonCImpl, 2));
+      this.provideWorkManagerProvider = DoubleCheck.provider(new SwitchingProvider<WorkManager>(singletonCImpl, 3));
     }
 
     @Override
@@ -597,6 +606,12 @@ public final class DaggerSelfGoalsApp_HiltComponents_SingletonC {
 
           case 1: // com.example.selfgoals.data.SelfGoalsDatabase 
           return (T) DatabaseModule_ProvideDatabaseFactory.provideDatabase(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule));
+
+          case 2: // com.example.selfgoals.data.repository.SettingsRepository 
+          return (T) new SettingsRepository(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule));
+
+          case 3: // androidx.work.WorkManager 
+          return (T) DatabaseModule_ProvideWorkManagerFactory.provideWorkManager(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule));
 
           default: throw new AssertionError(id);
         }

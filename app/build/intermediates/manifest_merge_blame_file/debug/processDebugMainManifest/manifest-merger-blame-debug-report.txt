@@ -1,8 +1,8 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="com.example.selfgoals"
-4    android:versionCode="1"
-5    android:versionName="1.0" >
+4    android:versionCode="3"
+5    android:versionName="1.2" >
 6
 7    <uses-sdk
 8        android:minSdkVersion="24"
@@ -42,12 +42,12 @@
 25-->[androidx.core:core:1.12.0] /Users/onyx/.gradle/caches/9.5.0/transforms/5c9db74245c8dbb2d1133b022645abab/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
 26        android:debuggable="true"
 27        android:extractNativeLibs="false"
-28        android:icon="@android:drawable/btn_star"
-28-->/Users/onyx/workspace/gemini/SelfGoals/app/src/main/AndroidManifest.xml:7:9-50
+28        android:icon="@mipmap/ic_launcher"
+28-->/Users/onyx/workspace/gemini/SelfGoals/app/src/main/AndroidManifest.xml:7:9-43
 29        android:label="SelfGoals"
 29-->/Users/onyx/workspace/gemini/SelfGoals/app/src/main/AndroidManifest.xml:8:9-34
-30        android:roundIcon="@android:drawable/btn_star"
-30-->/Users/onyx/workspace/gemini/SelfGoals/app/src/main/AndroidManifest.xml:9:9-55
+30        android:roundIcon="@mipmap/ic_launcher"
+30-->/Users/onyx/workspace/gemini/SelfGoals/app/src/main/AndroidManifest.xml:9:9-48
 31        android:supportsRtl="true"
 31-->/Users/onyx/workspace/gemini/SelfGoals/app/src/main/AndroidManifest.xml:10:9-35
 32        android:theme="@android:style/Theme.Material.Light.NoActionBar" >

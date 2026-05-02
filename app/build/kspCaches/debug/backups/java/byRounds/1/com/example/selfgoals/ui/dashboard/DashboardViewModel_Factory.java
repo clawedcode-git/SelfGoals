@@ -1,7 +1,9 @@
 package com.example.selfgoals.ui.dashboard;
 
 import android.app.Application;
+import androidx.work.WorkManager;
 import com.example.selfgoals.data.repository.GoalRepository;
+import com.example.selfgoals.data.repository.SettingsRepository;
 import dagger.internal.DaggerGenerated;
 import dagger.internal.Factory;
 import dagger.internal.QualifierMetadata;
@@ -27,23 +29,34 @@ public final class DashboardViewModel_Factory implements Factory<DashboardViewMo
 
   private final Provider<GoalRepository> repositoryProvider;
 
+  private final Provider<SettingsRepository> settingsRepositoryProvider;
+
+  private final Provider<WorkManager> workManagerProvider;
+
   public DashboardViewModel_Factory(Provider<Application> applicationProvider,
-      Provider<GoalRepository> repositoryProvider) {
+      Provider<GoalRepository> repositoryProvider,
+      Provider<SettingsRepository> settingsRepositoryProvider,
+      Provider<WorkManager> workManagerProvider) {
     this.applicationProvider = applicationProvider;
     this.repositoryProvider = repositoryProvider;
+    this.settingsRepositoryProvider = settingsRepositoryProvider;
+    this.workManagerProvider = workManagerProvider;
   }
 
   @Override
   public DashboardViewModel get() {
-    return newInstance(applicationProvider.get(), repositoryProvider.get());
+    return newInstance(applicationProvider.get(), repositoryProvider.get(), settingsRepositoryProvider.get(), workManagerProvider.get());
   }
 
   public static DashboardViewModel_Factory create(Provider<Application> applicationProvider,
-      Provider<GoalRepository> repositoryProvider) {
-    return new DashboardViewModel_Factory(applicationProvider, repositoryProvider);
+      Provider<GoalRepository> repositoryProvider,
+      Provider<SettingsRepository> settingsRepositoryProvider,
+      Provider<WorkManager> workManagerProvider) {
+    return new DashboardViewModel_Factory(applicationProvider, repositoryProvider, settingsRepositoryProvider, workManagerProvider);
   }
 
-  public static DashboardViewModel newInstance(Application application, GoalRepository repository) {
-    return new DashboardViewModel(application, repository);
+  public static DashboardViewModel newInstance(Application application, GoalRepository repository,
+      SettingsRepository settingsRepository, WorkManager workManager) {
+    return new DashboardViewModel(application, repository, settingsRepository, workManager);
   }
 }
