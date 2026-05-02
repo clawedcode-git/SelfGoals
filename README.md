@@ -56,11 +56,12 @@ SelfGoals/
 3.  Sync Gradle and run on an emulator or physical device (API 24+).
 4.  **Run Tests:** Execute `./gradlew test` for unit tests or `./gradlew connectedAndroidTest` for UI tests.
 
----
-*SelfGoals is built with care using modern Android standards and a focus on UX.*
-
 ## ✅ Project Status: v1.1 Refined
 - **Persistence:** Integrated Jetpack DataStore for user preferences.
-- **Robust Testing:** Full suite of Unit and UI tests implemented and verified.
+- **Robust Testing:** Full suite of Unit and UI tests implemented. Verified successfully on AVD (`SelfGoalsTest`).
+- **Visual Verification:** High-resolution screenshots confirmed consistent UI across boot and post-test states.
 - **Localization Ready:** 100% of UI strings moved to resource files.
 - **Architecture:** Refactored for maximum testability with constructor injection.
+
+---
+*SelfGoals is built with care using modern Android standards and a focus on UX.*
