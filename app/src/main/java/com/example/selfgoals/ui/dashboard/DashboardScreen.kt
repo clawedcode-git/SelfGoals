@@ -395,7 +395,7 @@ fun GoalItem(
 ) {
     val goal = goalDetails.goal
     val category = goalDetails.category
-    val milestones = goalDetails.milestones
+    val milestones = goalDetails.milestones.sortedBy { it.position }
     var expanded by remember { mutableStateOf(false) }
     var newMilestoneTitle by remember { mutableStateOf("") }
 

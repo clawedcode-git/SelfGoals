@@ -189,7 +189,7 @@ class DashboardViewModel @Inject constructor(
     fun reorderMilestone(goalId: Long, fromIndex: Int, toIndex: Int) {
         viewModelScope.launch {
             val details = _allGoals.value.find { it.goal.id == goalId } ?: return@launch
-            val milestones = details.milestones.toMutableList()
+            val milestones = details.milestones.sortedBy { it.position }.toMutableList()
             if (fromIndex !in milestones.indices || toIndex !in milestones.indices) return@launch
             
             val item = milestones.removeAt(fromIndex)
