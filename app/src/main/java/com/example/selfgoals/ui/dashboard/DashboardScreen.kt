@@ -8,6 +8,8 @@ import androidx.activity.result.contract.ActivityResultContracts
 import kotlinx.coroutines.launch
 import androidx.compose.animation.*
 import androidx.compose.animation.core.*
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.background
@@ -513,6 +515,7 @@ fun GoalItem(
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.surface
         ),
+        border = BorderStroke(1.dp, color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.08f)),
         elevation = CardDefaults.cardElevation(defaultElevation = 0.dp)
     ) {
         Column(modifier = Modifier.padding(20.dp)) {
@@ -737,15 +740,19 @@ fun GoalItem(
 
 @Composable
 fun AnalyticsOverview(stats: ProgressStats, isDark: Boolean) {
-    Card(
+    Box(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 24.dp, vertical = 8.dp),
-        shape = RoundedCornerShape(28.dp),
-        colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.surface
-        ),
-        elevation = CardDefaults.cardElevation(defaultElevation = 0.dp)
+            .padding(horizontal = 24.dp, vertical = 8.dp)
+            .clip(RoundedCornerShape(28.dp))
+            .background(
+                brush = Brush.linearGradient(
+                    colors = listOf(
+                        Color(0xFF2F80ED),
+                        Color(0xFFB236F4)
+                    )
+                )
+            )
     ) {
         Column(modifier = Modifier.padding(24.dp)) {
             Row(
@@ -755,12 +762,11 @@ fun AnalyticsOverview(stats: ProgressStats, isDark: Boolean) {
             ) {
                 Text(
                     text = stringResource(R.string.activity),
-                    style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Bold)
+                    style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Bold, color = Color.White)
                 )
                 Text(
                     text = stringResource(R.string.done_percent, (stats.goalCompletionRate * 100).toInt()),
-                    style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold),
-                    color = MaterialTheme.colorScheme.primary
+                    style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold, color = Color.White)
                 )
             }
             
@@ -771,7 +777,7 @@ fun AnalyticsOverview(stats: ProgressStats, isDark: Boolean) {
                     label = stringResource(R.string.goals),
                     current = stats.completedGoals,
                     total = stats.totalGoals,
-                    color = Color(0xFF007AFF),
+                    color = Color.White,
                     isDark = isDark,
                     modifier = Modifier.weight(1f)
                 )
@@ -779,7 +785,7 @@ fun AnalyticsOverview(stats: ProgressStats, isDark: Boolean) {
                     label = stringResource(R.string.tasks),
                     current = stats.completedMilestones,
                     total = stats.totalMilestones,
-                    color = Color(0xFF34C759),
+                    color = Color.White,
                     isDark = isDark,
                     modifier = Modifier.weight(1f)
                 )
@@ -793,17 +799,17 @@ fun AnalyticsModule(label: String, current: Int, total: Int, color: Color, isDar
     Row(
         modifier = modifier
             .clip(RoundedCornerShape(20.dp))
-            .background(MaterialTheme.colorScheme.secondary.copy(alpha = if (isDark) 0.15f else 0.05f))
+            .background(Color.White.copy(alpha = 0.15f))
             .padding(16.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
         Column {
-            Text(text = label, style = MaterialTheme.typography.labelMedium, color = Color.Gray)
+            Text(text = label, style = MaterialTheme.typography.labelMedium, color = Color.White.copy(alpha = 0.7f))
             Spacer(modifier = Modifier.height(4.dp))
             Text(
                 text = "$current/$total",
-                style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Bold, fontSize = 22.sp)
+                style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Bold, fontSize = 22.sp, color = Color.White)
             )
         }
         
@@ -820,11 +826,11 @@ fun AnalyticsModule(label: String, current: Int, total: Int, color: Color, isDar
         ) {
             androidx.compose.foundation.Canvas(modifier = Modifier.size(44.dp)) {
                 drawCircle(
-                    color = color.copy(alpha = 0.15f),
+                    color = Color.White.copy(alpha = 0.2f),
                     style = androidx.compose.ui.graphics.drawscope.Stroke(width = 4.dp.toPx())
                 )
                 drawArc(
-                    color = color,
+                    color = Color.White,
                     startAngle = -90f,
                     sweepAngle = animatedProgress * 360f,
                     useCenter = false,
@@ -837,7 +843,7 @@ fun AnalyticsModule(label: String, current: Int, total: Int, color: Color, isDar
             Text(
                 text = "${(progressTarget * 100).toInt()}%",
                 style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold, fontSize = 9.sp),
-                color = color
+                color = Color.White
             )
         }
     }
