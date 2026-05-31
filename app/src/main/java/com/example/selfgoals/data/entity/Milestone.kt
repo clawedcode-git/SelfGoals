@@ -23,5 +23,6 @@ data class Milestone(
     val goalId: Long,
     val title: String,
     val isCompleted: Boolean = false,
-    val position: Int = 0
+    val position: Int = 0,
+    val deadline: Long? = null // Optional deadline timestamp
 )

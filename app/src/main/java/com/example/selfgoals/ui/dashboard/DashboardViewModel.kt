@@ -207,10 +207,10 @@ class DashboardViewModel @Inject constructor(
         viewModelScope.launch { repository.updateGoal(goal.copy(isPriority = !goal.isPriority)) }
     }
 
-    fun addMilestone(goalId: Long, title: String) {
+    fun addMilestone(goalId: Long, title: String, deadline: Long? = null) {
         viewModelScope.launch {
             val currentMilestones = _allGoals.value.find { it.goal.id == goalId }?.milestones ?: emptyList()
-            repository.insertMilestone(Milestone(goalId = goalId, title = title, position = currentMilestones.size))
+            repository.insertMilestone(Milestone(goalId = goalId, title = title, position = currentMilestones.size, deadline = deadline))
         }
     }
 

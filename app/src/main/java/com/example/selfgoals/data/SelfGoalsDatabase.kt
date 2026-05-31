@@ -11,7 +11,7 @@ import com.example.selfgoals.data.entity.Milestone
 
 @Database(
     entities = [Goal::class, Category::class, Milestone::class],
-    version = 2,
+    version = 3,
     exportSchema = false
 )
 abstract class SelfGoalsDatabase : RoomDatabase() {

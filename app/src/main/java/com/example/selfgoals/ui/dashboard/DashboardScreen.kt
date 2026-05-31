@@ -330,9 +330,9 @@ fun DashboardScreen(
                                 viewModel.togglePriority(goalDetails.goal)
                             },
                             onDeleteGoal = { viewModel.deleteGoal(goalDetails.goal) },
-                            onAddMilestone = { title -> 
+                            onAddMilestone = { title, deadline -> 
                                 haptic.performHapticFeedback(HapticFeedbackType.LongPress)
-                                viewModel.addMilestone(goalDetails.goal.id, title) 
+                                viewModel.addMilestone(goalDetails.goal.id, title, deadline) 
                             },
                             onToggleMilestone = { 
                                 haptic.performHapticFeedback(HapticFeedbackType.LongPress)
@@ -485,6 +485,7 @@ fun CategoryList(
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun GoalItem(
     goalDetails: GoalDetails,
@@ -494,7 +495,7 @@ fun GoalItem(
     onArchiveGoal: () -> Unit,
     onPriorityToggle: () -> Unit,
     onDeleteGoal: () -> Unit,
-    onAddMilestone: (String) -> Unit,
+    onAddMilestone: (String, Long?) -> Unit,
     onToggleMilestone: (Milestone) -> Unit,
     onMoveMilestone: (Int, Int) -> Unit
 ) {
@@ -503,6 +504,8 @@ fun GoalItem(
     val milestones = goalDetails.milestones.sortedBy { it.position }
     var expanded by remember { mutableStateOf(false) }
     var newMilestoneTitle by remember { mutableStateOf("") }
+    var selectedMilestoneDeadline by remember { mutableStateOf<Long?>(null) }
+    var showMilestoneDatePicker by remember { mutableStateOf(false) }
 
     val completedMilestones = milestones.count { it.isCompleted }
     val progress = if (milestones.isNotEmpty()) completedMilestones.toFloat() / milestones.size else 0f
@@ -652,13 +655,23 @@ fun GoalItem(
                                     .clickable { onToggleMilestone(milestone) }
                             )
                             Spacer(modifier = Modifier.width(12.dp))
-                            Text(
-                                text = milestone.title,
-                                style = MaterialTheme.typography.bodyMedium,
-                                textDecoration = if (milestone.isCompleted) TextDecoration.LineThrough else null,
-                                color = if (milestone.isCompleted) Color.Gray else MaterialTheme.colorScheme.onSurface,
-                                modifier = Modifier.weight(1f)
-                            )
+                            Column(modifier = Modifier.weight(1f)) {
+                                Text(
+                                    text = milestone.title,
+                                    style = MaterialTheme.typography.bodyMedium,
+                                    textDecoration = if (milestone.isCompleted) TextDecoration.LineThrough else null,
+                                    color = if (milestone.isCompleted) Color.Gray else MaterialTheme.colorScheme.onSurface
+                                )
+                                if (milestone.deadline != null) {
+                                    val isMilestoneOverdue = milestone.deadline < System.currentTimeMillis() && !milestone.isCompleted
+                                    Text(
+                                        text = SimpleDateFormat("MMM dd, yyyy", Locale.getDefault()).format(Date(milestone.deadline)),
+                                        style = MaterialTheme.typography.labelSmall,
+                                        color = if (isMilestoneOverdue) Color(0xFFFF3B30) else Color.Gray,
+                                        modifier = Modifier.padding(top = 2.dp)
+                                    )
+                                }
+                            }
                             
                             // Simple reorder controls
                             if (index > 0) {
@@ -694,16 +707,67 @@ fun GoalItem(
                             ),
                             textStyle = MaterialTheme.typography.bodyMedium
                         )
+                        IconButton(onClick = { showMilestoneDatePicker = true }) {
+                            Icon(
+                                Icons.Default.CalendarToday,
+                                contentDescription = "Pick Deadline",
+                                tint = if (selectedMilestoneDeadline != null) MaterialTheme.colorScheme.primary else Color.Gray,
+                                modifier = Modifier.size(20.dp)
+                            )
+                        }
                         IconButton(
                             onClick = {
                                 if (newMilestoneTitle.isNotBlank()) {
-                                    onAddMilestone(newMilestoneTitle)
+                                    onAddMilestone(newMilestoneTitle, selectedMilestoneDeadline)
                                     newMilestoneTitle = ""
+                                    selectedMilestoneDeadline = null
                                 }
                             },
                             enabled = newMilestoneTitle.isNotBlank()
                         ) {
                             Icon(Icons.Default.AddCircle, contentDescription = stringResource(R.string.add), tint = MaterialTheme.colorScheme.primary)
+                        }
+                    }
+
+                    if (selectedMilestoneDeadline != null) {
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            modifier = Modifier.padding(start = 16.dp, top = 4.dp, bottom = 8.dp)
+                        ) {
+                            Icon(Icons.Default.CalendarToday, null, tint = MaterialTheme.colorScheme.primary, modifier = Modifier.size(14.dp))
+                            Spacer(modifier = Modifier.width(4.dp))
+                            Text(
+                                text = SimpleDateFormat("MMM dd, yyyy", Locale.getDefault()).format(Date(selectedMilestoneDeadline!!)),
+                                style = MaterialTheme.typography.labelSmall,
+                                color = MaterialTheme.colorScheme.primary
+                            )
+                            Spacer(modifier = Modifier.width(4.dp))
+                            Icon(
+                                Icons.Default.Close,
+                                contentDescription = "Clear",
+                                tint = Color.Gray,
+                                modifier = Modifier
+                                    .size(14.dp)
+                                    .clickable { selectedMilestoneDeadline = null }
+                            )
+                        }
+                    }
+
+                    if (showMilestoneDatePicker) {
+                        val mDatePickerState = rememberDatePickerState()
+                        DatePickerDialog(
+                            onDismissRequest = { showMilestoneDatePicker = false },
+                            confirmButton = {
+                                TextButton(onClick = {
+                                    selectedMilestoneDeadline = mDatePickerState.selectedDateMillis
+                                    showMilestoneDatePicker = false
+                                }) { Text(stringResource(R.string.done)) }
+                            },
+                            dismissButton = {
+                                TextButton(onClick = { showMilestoneDatePicker = false }) { Text(stringResource(R.string.cancel)) }
+                            }
+                        ) {
+                            DatePicker(state = mDatePickerState)
                         }
                     }
                     
