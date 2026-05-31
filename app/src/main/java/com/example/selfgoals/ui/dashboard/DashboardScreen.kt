@@ -2,6 +2,7 @@ package com.example.selfgoals.ui.dashboard
 
 import android.content.Intent
 import androidx.compose.animation.*
+import androidx.compose.animation.core.*
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.isSystemInDarkTheme
@@ -364,8 +365,23 @@ fun CategoryList(
         items(categories) { category ->
             val isSelected = selectedCategoryId == category.id
             val color = Color(category.color)
+            
+            val targetBgColor = if (isSelected) color else if (isDark) color.copy(alpha = 0.2f) else color.copy(alpha = 0.1f)
+            val animatedBgColor by animateColorAsState(
+                targetValue = targetBgColor,
+                animationSpec = spring(stiffness = Spring.StiffnessMedium),
+                label = "categoryBg"
+            )
+            
+            val targetTextColor = if (isSelected) Color.White else color
+            val animatedTextColor by animateColorAsState(
+                targetValue = targetTextColor,
+                animationSpec = spring(stiffness = Spring.StiffnessMedium),
+                label = "categoryText"
+            )
+
             Surface(
-                color = if (isSelected) color else if (isDark) color.copy(alpha = 0.2f) else color.copy(alpha = 0.1f),
+                color = animatedBgColor,
                 shape = RoundedCornerShape(20.dp),
                 modifier = Modifier.clickable { onCategoryClick(category.id) }
             ) {
@@ -373,7 +389,7 @@ fun CategoryList(
                     text = category.name,
                     modifier = Modifier.padding(horizontal = 16.dp, vertical = 6.dp),
                     style = MaterialTheme.typography.labelLarge.copy(fontWeight = FontWeight.Bold),
-                    color = if (isSelected) Color.White else color
+                    color = animatedTextColor
                 )
             }
         }
@@ -481,9 +497,14 @@ fun GoalItem(
             }
 
             if (milestones.isNotEmpty()) {
+                val animatedProgress by animateFloatAsState(
+                    targetValue = progress,
+                    animationSpec = spring(dampingRatio = Spring.DampingRatioNoBouncy, stiffness = Spring.StiffnessLow),
+                    label = "goalProgress"
+                )
                 Spacer(modifier = Modifier.height(12.dp))
                 LinearProgressIndicator(
-                    progress = progress,
+                    progress = animatedProgress,
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(6.dp)
@@ -494,7 +515,11 @@ fun GoalItem(
                 )
             }
 
-            AnimatedVisibility(visible = expanded) {
+            AnimatedVisibility(
+                visible = expanded,
+                enter = expandVertically(animationSpec = spring(dampingRatio = Spring.DampingRatioLowBouncy, stiffness = Spring.StiffnessLow)) + fadeIn(),
+                exit = shrinkVertically(animationSpec = spring(dampingRatio = Spring.DampingRatioNoBouncy, stiffness = Spring.StiffnessMedium)) + fadeOut()
+            ) {
                 Column {
                     Spacer(modifier = Modifier.height(16.dp))
                     if (goal.description.isNotEmpty()) {
@@ -672,8 +697,14 @@ fun AnalyticsModule(label: String, current: Int, total: Int, color: Color, isDar
             style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Bold, fontSize = 22.sp)
         )
         Spacer(modifier = Modifier.height(8.dp))
+        val progressTarget = if (total > 0) current.toFloat() / total else 0f
+        val animatedProgress by animateFloatAsState(
+            targetValue = progressTarget,
+            animationSpec = spring(dampingRatio = Spring.DampingRatioNoBouncy, stiffness = Spring.StiffnessLow),
+            label = "analyticsProgress"
+        )
         LinearProgressIndicator(
-            progress = if (total > 0) current.toFloat() / total else 0f,
+            progress = animatedProgress,
             modifier = Modifier.fillMaxWidth().height(4.dp).clip(CircleShape),
             color = color,
             trackColor = color.copy(alpha = 0.1f)
