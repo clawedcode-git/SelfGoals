@@ -51,4 +51,16 @@
     <string name="status_archived">[ARCHIVED]</string>
     <string name="status_done">[DONE]</string>
     <string name="status_active">[ACTIVE]</string>
+
+    <!-- Backup & Sync Center -->
+    <string name="backup_restore">Backup &amp; Restore</string>
+    <string name="backup_sync_center">Backup &amp; Sync Center</string>
+    <string name="backup_sync_center_desc">Securely export your database to share or import from a portable JSON file.</string>
+    <string name="create_backup">Create JSON Backup</string>
+    <string name="restore_backup">Restore JSON Backup</string>
+    <string name="restore_warning_title">Restore Backup?</string>
+    <string name="restore_warning_desc">Restoring a backup will completely replace your current categories, goals, and milestones. This action is irreversible.</string>
+    <string name="restore_success">Database restored successfully!</string>
+    <string name="restore_failed">Failed to restore backup. Please ensure the file is a valid SelfGoals JSON backup.</string>
+    <string name="backup_shared">Backup ready for sharing!</string>
 </resources>

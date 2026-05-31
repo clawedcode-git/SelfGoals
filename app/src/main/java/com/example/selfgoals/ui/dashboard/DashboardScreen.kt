@@ -1,6 +1,11 @@
 package com.example.selfgoals.ui.dashboard
 
 import android.content.Intent
+import android.net.Uri
+import android.widget.Toast
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
+import kotlinx.coroutines.launch
 import androidx.compose.animation.*
 import androidx.compose.animation.core.*
 import androidx.compose.foundation.background
@@ -60,6 +65,9 @@ fun DashboardScreen(
     var editingGoal by remember { mutableStateOf<Goal?>(null) }
     var showAddCategoryDialog by remember { mutableStateOf(false) }
     var showSettingsMenu by remember { mutableStateOf(false) }
+    var showSyncDialog by remember { mutableStateOf(false) }
+    var showRestoreConfirmDialog by remember { mutableStateOf(false) }
+    var restoreJsonText by remember { mutableStateOf<String?>(null) }
 
     val systemDark = isSystemInDarkTheme()
     val isDark = when (themeMode) {
@@ -71,6 +79,25 @@ fun DashboardScreen(
     val bgColor = MaterialTheme.colorScheme.background
     val context = LocalContext.current
     val haptic = LocalHapticFeedback.current
+    val scope = rememberCoroutineScope()
+
+    val importLauncher = rememberLauncherForActivityResult(
+        contract = ActivityResultContracts.GetContent()
+    ) { uri: Uri? ->
+        if (uri != null) {
+            scope.launch {
+                try {
+                    context.contentResolver.openInputStream(uri)?.use { inputStream ->
+                        val json = inputStream.bufferedReader().use { it.readText() }
+                        restoreJsonText = json
+                        showRestoreConfirmDialog = true
+                    }
+                } catch (e: Exception) {
+                    Toast.makeText(context, context.getString(R.string.restore_failed), Toast.LENGTH_LONG).show()
+                }
+            }
+        }
+    }
 
     Scaffold(
         containerColor = bgColor,
@@ -172,6 +199,14 @@ fun DashboardScreen(
                                     showSettingsMenu = false
                                 },
                                 leadingIcon = { Icon(Icons.Default.Settings, null) }
+                            )
+                            DropdownMenuItem(
+                                text = { Text(stringResource(R.string.backup_restore)) },
+                                onClick = { 
+                                    showSyncDialog = true
+                                    showSettingsMenu = false
+                                },
+                                leadingIcon = { Icon(Icons.Default.Backup, null) }
                             )
                         }
                     }
@@ -343,6 +378,56 @@ fun DashboardScreen(
                 haptic.performHapticFeedback(HapticFeedbackType.LongPress)
                 viewModel.addCategory(name, color)
                 showAddCategoryDialog = false
+            }
+        )
+    }
+
+    if (showSyncDialog) {
+        SyncCenterDialog(
+            onDismiss = { showSyncDialog = false },
+            onCreateBackup = {
+                scope.launch {
+                    try {
+                        val json = viewModel.exportBackupJson()
+                        val sendIntent = Intent().apply {
+                            action = Intent.ACTION_SEND
+                            putExtra(Intent.EXTRA_TEXT, json)
+                            type = "application/json"
+                        }
+                        context.startActivity(Intent.createChooser(sendIntent, context.getString(R.string.backup_shared)))
+                        showSyncDialog = false
+                    } catch (e: Exception) {
+                        Toast.makeText(context, context.getString(R.string.export_no_goals), Toast.LENGTH_LONG).show()
+                    }
+                }
+            },
+            onRestoreBackup = {
+                importLauncher.launch("application/json")
+                showSyncDialog = false
+            }
+        )
+    }
+
+    if (showRestoreConfirmDialog) {
+        RestoreConfirmDialog(
+            onDismiss = {
+                showRestoreConfirmDialog = false
+                restoreJsonText = null
+            },
+            onConfirm = {
+                scope.launch {
+                    val text = restoreJsonText
+                    if (text != null) {
+                        val success = viewModel.importBackupJson(text)
+                        if (success) {
+                            Toast.makeText(context, context.getString(R.string.restore_success), Toast.LENGTH_LONG).show()
+                        } else {
+                            Toast.makeText(context, context.getString(R.string.restore_failed), Toast.LENGTH_LONG).show()
+                        }
+                    }
+                    showRestoreConfirmDialog = false
+                    restoreJsonText = null
+                }
             }
         )
     }
@@ -982,11 +1067,11 @@ fun AddCategoryDialog(
                     colors.forEach { color ->
                         Box(
                             modifier = Modifier
-                                .size(36.dp)
-                                .clip(CircleShape)
-                                .background(Color(color))
-                                .clickable { selectedColor = color }
-                                .padding(4.dp)
+                                  .size(36.dp)
+                                  .clip(CircleShape)
+                                  .background(Color(color))
+                                  .clickable { selectedColor = color }
+                                  .padding(4.dp)
                         ) {
                             if (selectedColor == color) {
                                 Box(
@@ -998,6 +1083,117 @@ fun AddCategoryDialog(
                         }
                     }
                 }
+            }
+        }
+    )
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun SyncCenterDialog(
+    onDismiss: () -> Unit,
+    onCreateBackup: () -> Unit,
+    onRestoreBackup: () -> Unit
+) {
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        confirmButton = {
+            TextButton(onClick = onDismiss) {
+                Text(stringResource(R.string.done), fontWeight = FontWeight.Bold)
+            }
+        },
+        title = {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Icon(
+                    Icons.Default.Backup,
+                    contentDescription = null,
+                    tint = MaterialTheme.colorScheme.primary,
+                    modifier = Modifier.size(28.dp)
+                )
+                Spacer(modifier = Modifier.width(12.dp))
+                Text(
+                    text = stringResource(R.string.backup_sync_center),
+                    style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Bold)
+                )
+            }
+        },
+        text = {
+            Column {
+                Text(
+                    text = stringResource(R.string.backup_sync_center_desc),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = Color.Gray
+                )
+                Spacer(modifier = Modifier.height(24.dp))
+                
+                Button(
+                    onClick = onCreateBackup,
+                    modifier = Modifier.fillMaxWidth(),
+                    shape = RoundedCornerShape(16.dp),
+                    colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary)
+                ) {
+                    Icon(Icons.Default.Share, contentDescription = null, modifier = Modifier.size(18.dp))
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Text(stringResource(R.string.create_backup), fontWeight = FontWeight.Bold)
+                }
+                
+                Spacer(modifier = Modifier.height(12.dp))
+                
+                OutlinedButton(
+                    onClick = onRestoreBackup,
+                    modifier = Modifier.fillMaxWidth(),
+                    shape = RoundedCornerShape(16.dp)
+                ) {
+                    Icon(Icons.Default.FolderOpen, contentDescription = null, modifier = Modifier.size(18.dp))
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Text(stringResource(R.string.restore_backup), fontWeight = FontWeight.Bold)
+                }
+            }
+        }
+    )
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun RestoreConfirmDialog(
+    onDismiss: () -> Unit,
+    onConfirm: () -> Unit
+) {
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        title = {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Icon(
+                    Icons.Default.Warning,
+                    contentDescription = null,
+                    tint = MaterialTheme.colorScheme.error,
+                    modifier = Modifier.size(28.dp)
+                )
+                Spacer(modifier = Modifier.width(12.dp))
+                Text(
+                    text = stringResource(R.string.restore_warning_title),
+                    style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Bold)
+                )
+            }
+        },
+        text = {
+            Text(
+                text = stringResource(R.string.restore_warning_desc),
+                style = MaterialTheme.typography.bodyMedium
+            )
+        },
+        confirmButton = {
+            Button(
+                onClick = onConfirm,
+                colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.error),
+                shape = RoundedCornerShape(12.dp)
+            ) {
+                Text(stringResource(R.string.restore_backup), fontWeight = FontWeight.Bold)
+            }
+        },
+        dismissButton = {
+            TextButton(onClick = onDismiss) {
+                Text(stringResource(R.string.cancel), fontWeight = FontWeight.Bold)
             }
         }
     )

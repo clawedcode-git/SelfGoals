@@ -284,4 +284,31 @@ class DashboardViewModel @Inject constructor(
     fun addCategory(name: String, color: Int) {
         viewModelScope.launch { repository.insertCategory(Category(name = name, color = color)) }
     }
+
+    suspend fun exportBackupJson(): String {
+        val categories = repository.getAllCategoriesRaw()
+        val goals = repository.getAllGoalsRaw()
+        val milestones = repository.getAllMilestonesRaw()
+        val backup = com.example.selfgoals.data.entity.BackupData(categories, goals, milestones)
+        return com.google.gson.GsonBuilder().setPrettyPrinting().create().toJson(backup)
+    }
+
+    suspend fun importBackupJson(json: String): Boolean {
+        return try {
+            val backup = com.google.gson.Gson().fromJson(json, com.example.selfgoals.data.entity.BackupData::class.java)
+            if (backup != null) {
+                repository.restoreDatabase(
+                    categories = backup.categories ?: emptyList(),
+                    goals = backup.goals ?: emptyList(),
+                    milestones = backup.milestones ?: emptyList()
+                )
+                true
+            } else {
+                false
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+            false
+        }
+    }
 }
