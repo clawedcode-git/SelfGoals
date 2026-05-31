@@ -28,5 +28,7 @@ data class Goal(
     val isCompleted: Boolean = false,
     val isArchived: Boolean = false,
     val isPriority: Boolean = false,
+    val streakCount: Int = 0,
+    val lastCompletedAt: Long? = null,
     val createdAt: Long = System.currentTimeMillis()
 )

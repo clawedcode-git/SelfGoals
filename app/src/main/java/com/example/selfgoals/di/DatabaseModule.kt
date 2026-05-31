@@ -25,7 +25,8 @@ object DatabaseModule {
             context,
             SelfGoalsDatabase::class.java,
             "self_goals_db"
-        ).build()
+        ).fallbackToDestructiveMigration()
+         .build()
     }
 
     @Provides

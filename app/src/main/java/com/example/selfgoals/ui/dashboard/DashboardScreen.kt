@@ -468,11 +468,30 @@ fun GoalItem(
                             )
                         }
                     }
-                    Text(
-                        text = goal.title,
-                        style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
-                        textDecoration = if (goal.isCompleted) TextDecoration.LineThrough else null
-                    )
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Text(
+                            text = goal.title,
+                            style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
+                            textDecoration = if (goal.isCompleted) TextDecoration.LineThrough else null,
+                            modifier = Modifier.weight(1f, fill = false)
+                        )
+                        if (goal.streakCount > 0) {
+                            Spacer(modifier = Modifier.width(8.dp))
+                            Surface(
+                                color = Color(0xFFFF9500).copy(alpha = 0.15f),
+                                shape = RoundedCornerShape(10.dp)
+                            ) {
+                                Text(
+                                    text = "🔥 ${goal.streakCount}",
+                                    style = MaterialTheme.typography.labelSmall.copy(
+                                        fontWeight = FontWeight.Bold,
+                                        color = Color(0xFFFF9500)
+                                    ),
+                                    modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp)
+                                )
+                            }
+                        }
+                    }
                     if (goal.deadline != null) {
                         val isOverdue = goal.deadline < System.currentTimeMillis() && !goal.isCompleted
                         Text(
@@ -684,31 +703,56 @@ fun AnalyticsOverview(stats: ProgressStats, isDark: Boolean) {
 
 @Composable
 fun AnalyticsModule(label: String, current: Int, total: Int, color: Color, isDark: Boolean, modifier: Modifier = Modifier) {
-    Column(
+    Row(
         modifier = modifier
             .clip(RoundedCornerShape(20.dp))
             .background(MaterialTheme.colorScheme.secondary.copy(alpha = if (isDark) 0.15f else 0.05f))
-            .padding(16.dp)
+            .padding(16.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.SpaceBetween
     ) {
-        Text(text = label, style = MaterialTheme.typography.labelMedium, color = Color.Gray)
-        Spacer(modifier = Modifier.height(4.dp))
-        Text(
-            text = "$current/$total",
-            style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Bold, fontSize = 22.sp)
-        )
-        Spacer(modifier = Modifier.height(8.dp))
+        Column {
+            Text(text = label, style = MaterialTheme.typography.labelMedium, color = Color.Gray)
+            Spacer(modifier = Modifier.height(4.dp))
+            Text(
+                text = "$current/$total",
+                style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Bold, fontSize = 22.sp)
+            )
+        }
+        
         val progressTarget = if (total > 0) current.toFloat() / total else 0f
         val animatedProgress by animateFloatAsState(
             targetValue = progressTarget,
             animationSpec = spring(dampingRatio = Spring.DampingRatioNoBouncy, stiffness = Spring.StiffnessLow),
             label = "analyticsProgress"
         )
-        LinearProgressIndicator(
-            progress = animatedProgress,
-            modifier = Modifier.fillMaxWidth().height(4.dp).clip(CircleShape),
-            color = color,
-            trackColor = color.copy(alpha = 0.1f)
-        )
+        
+        Box(
+            contentAlignment = Alignment.Center,
+            modifier = Modifier.size(44.dp)
+        ) {
+            androidx.compose.foundation.Canvas(modifier = Modifier.size(44.dp)) {
+                drawCircle(
+                    color = color.copy(alpha = 0.15f),
+                    style = androidx.compose.ui.graphics.drawscope.Stroke(width = 4.dp.toPx())
+                )
+                drawArc(
+                    color = color,
+                    startAngle = -90f,
+                    sweepAngle = animatedProgress * 360f,
+                    useCenter = false,
+                    style = androidx.compose.ui.graphics.drawscope.Stroke(
+                        width = 4.dp.toPx(),
+                        cap = androidx.compose.ui.graphics.StrokeCap.Round
+                    )
+                )
+            }
+            Text(
+                text = "${(progressTarget * 100).toInt()}%",
+                style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold, fontSize = 9.sp),
+                color = color
+            )
+        }
     }
 }
 

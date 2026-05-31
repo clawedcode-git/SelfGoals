@@ -164,7 +164,39 @@ class DashboardViewModel @Inject constructor(
     }
 
     fun toggleGoalCompletion(goal: Goal) {
-        viewModelScope.launch { repository.updateGoal(goal.copy(isCompleted = !goal.isCompleted)) }
+        viewModelScope.launch {
+            val nextCompleted = !goal.isCompleted
+            val now = System.currentTimeMillis()
+            val nextStreak: Int
+            val nextLastCompleted: Long?
+            
+            if (nextCompleted) {
+                val lastCompleted = goal.lastCompletedAt
+                if (lastCompleted == null) {
+                    nextStreak = 1
+                } else {
+                    val diffMs = now - lastCompleted
+                    val diffHours = diffMs / (1000 * 60 * 60)
+                    nextStreak = if (diffHours in 0..36) {
+                        goal.streakCount + 1
+                    } else {
+                        1
+                    }
+                }
+                nextLastCompleted = now
+            } else {
+                nextStreak = goal.streakCount
+                nextLastCompleted = goal.lastCompletedAt
+            }
+            
+            repository.updateGoal(
+                goal.copy(
+                    isCompleted = nextCompleted,
+                    streakCount = nextStreak,
+                    lastCompletedAt = nextLastCompleted
+                )
+            )
+        }
     }
 
     fun toggleArchive(goal: Goal) {
